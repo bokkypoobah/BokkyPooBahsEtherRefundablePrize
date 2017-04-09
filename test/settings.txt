@@ -1,8 +1,8 @@
 IPCFILE=ipc:./testchain/geth.ipc
 PASSWORD=testtest
 
-BARFSOL=../BokkyPooBahsEtherRefundablePrize.sol
-BARFTEMPSOL=BokkyPooBahsEtherRefundablePrizeTemp.sol
+BERPSOL=../contract/BokkyPooBahsEtherRefundablePrize.sol
+BERPTEMPSOL=BokkyPooBahsEtherRefundablePrizeTemp.sol
 
 INCLUDEJS=./include.js
 TEST1OUTPUT=test1output.txt

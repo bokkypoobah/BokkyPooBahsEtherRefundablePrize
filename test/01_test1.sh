@@ -56,6 +56,8 @@ echo "$TEST"
 FLATTENEDBERPSOL=`./stripCrLf $BERPTEMPSOL | tr -s ' '`
 printf "var barfSource = \'$FLATTENEDBERPSOL\';" > $INCLUDEJS
 
+exit
+
 geth --verbosity 3 attach $GETHATTACHPOINT << EOF | tee $TEST1OUTPUT
 loadScript("functions.js");
 unlockAccounts("$PASSWORD");
