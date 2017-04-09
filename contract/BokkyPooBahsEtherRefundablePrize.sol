@@ -111,7 +111,7 @@ contract ERC20Token is Owned {
 contract BokkyPooBahsEtherRefundablePrize is ERC20Token {
 
     // ------ Token information ------
-    string public constant symbol = "BERT";
+    string public constant symbol = "BERP";
     string public constant name = "BokkyPooBah Ether Refundable Prize";
     uint8 public constant decimals = 18;
 
