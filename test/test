@@ -1,0 +1,103 @@
+pragma solidity ^0.4.8;
+ 
+// ----------------------------------------------------------------------------------------------
+// Unique deposit contacts for customers to deposit ethers that are sent to different wallets
+//
+// Enjoy. (c) Bok Consulting Pty Ltd & Incent Rewards 2017. The MIT Licence.
+// ----------------------------------------------------------------------------------------------
+ 
+contract Config {
+    // Incent account - 0.5%
+    uint256 public constant INCENT_RATE_PER_THOUSAND = 5;
+    address public incentAccount = {{INCENTACCOUNT}};
+ 
+    // Fees - 0.5%
+    uint256 public constant FEE_RATE_PER_THOUSAND = 5;
+    address public constant feeAccount = {{FEEACCOUNT}};
+ 
+    // Client account - remainder of sent amount
+    address public constant clientAccount = {{CLIENTACCOUNT}};
+}
+ 
+contract Owned {
+    address public owner;
+    event OwnershipTransferred(address indexed _from, address indexed _to);
+ 
+    function Owned() {
+        owner = msg.sender;
+    }
+ 
+    modifier onlyOwner {
+        if (msg.sender != owner) throw;
+        _;
+    }
+ 
+    function transferOwnership(address newOwner) onlyOwner {
+        OwnershipTransferred(owner, newOwner);
+        owner = newOwner;
+    }
+}
+ 
+contract CustomerDeposit {
+    uint256 public totalDeposit = 0;
+    CustomerDepositFactory public factory;
+ 
+    function CustomerDeposit(CustomerDepositFactory _factory) {
+        factory = _factory;
+    }
+ 
+    function () payable {
+        totalDeposit += msg.value;
+        factory.receiveDeposit.value(msg.value)();
+    }
+}
+ 
+contract CustomerDepositFactory is Owned, Config {
+    uint256 public totalDeposits = 0;
+    CustomerDeposit[] public depositContracts;
+    mapping (address => bool) public isDepositContract;
+ 
+    // NOTE: Remix does not handle indexed addresses correctly
+    event DepositContractCreated(address indexed depositContract, uint256 number);
+    event DepositReceived(address indexed depositContract, uint _value);
+ 
+    function createDepositContracts(uint256 number) onlyOwner {
+        for (uint256 i = 0; i < number; i++) {
+            CustomerDeposit customerDeposit = new CustomerDeposit(this);
+            depositContracts.push(customerDeposit);
+            isDepositContract[customerDeposit] = true;
+            DepositContractCreated(customerDeposit, depositContracts.length);
+        }
+    }
+ 
+    function numberOfDepositContracts() constant returns (uint) {
+        return depositContracts.length;
+    }
+ 
+    function receiveDeposit() payable {
+        // Can only receive ethers from deposit contracts created by this factory
+        if (!isDepositContract[msg.sender]) throw;
+ 
+        // Record total deposits
+        totalDeposits += msg.value;
+ 
+        // Send amount to incent address
+        uint256 value1 = msg.value * INCENT_RATE_PER_THOUSAND / 1000;
+        if (!incentAccount.send(value1)) throw;
+ 
+        // Send fee to the fee address
+        uint256 value2 = msg.value * FEE_RATE_PER_THOUSAND / 1000;
+        if (!feeAccount.send(value2)) throw;
+ 
+        // Send the remainder to the client's wallet
+        uint256 value3 = msg.value - value1 - value2;
+        if (!clientAccount.send(value3)) throw;
+ 
+        DepositReceived(msg.sender, msg.value);
+    }
+ 
+    // Prevent accidental sending of ethers to the factory
+    function () {
+        throw;
+    }
+}
