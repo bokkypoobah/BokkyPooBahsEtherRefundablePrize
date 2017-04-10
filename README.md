@@ -53,4 +53,19 @@ The test cases can be found in [test/01_test1.sh](https://github.com/bokkypoobah
 
 <br />
 
+### BERP Reward Contributions 
+
+(contributions to the BERP Reward Pool will be listed here)
+
+
+<br />
+
+### BERP Reward Distribution 
+
+BERP rewards will be distributed to the list below in equal proportions when the WhitehatWithdraw contract expires (expected April 15 2017):
+
+* Reward Account [0xe0A2AC4c7b46Ce32C5b4Bf153Ca50E603D36Abc8](https://etherscan.io/address/0xe0A2AC4c7b46Ce32C5b4Bf153Ca50E603D36Abc8). Transaction [0xce4babae](http://gastracker.io/tx/0xce4babae31c62346ffa61f65a2ceab93955844459e4ead58e3cd909647c1b20a). [Source](https://www.reddit.com/r/ethereum/comments/64ia5z/incentivising_the_dao_refundathon_with_the_berp/dg2p3u2/).
+
+<br />
+
 Enjoy. (c) BokkyPooBah / Bok Consulting Pty Ltd 2017. The MIT Licence.
