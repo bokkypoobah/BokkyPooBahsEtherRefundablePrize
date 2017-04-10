@@ -6,6 +6,20 @@ pragma solidity ^0.4.8;
 // A gift token backed by ethers. Holders of this token can always sell back
 // their tokens to this contract at a known price
 //
+// Tokens can be bought from this contract at the Buy Price. Tokens can be
+// sold back to this contract at the Sell Price 
+// 
+// Period                                ETH per BERP
+// ------------------------- ------------------------
+// From         To               Buy Price Sell Price
+// ------------ ------------ ------------- ----------
+// start        +7 days             0.0010     0.0010
+// +7 days      +30 days            0.0011     0.0010
+// +30 days     +60 days            0.0012     0.0010
+// +60 days     +90 days            0.0013     0.0010
+// +90 days     +365 days           0.0015     0.0010
+// +365 days    forever          1000.0000     0.0010
+//
 // Based on Vlad's Safe Token Sale Mechanism Contract
 // - https://medium.com/@Vlad_Zamfir/a-safe-token-sale-mechanism-8d73c430ddd1
 //
@@ -119,20 +133,6 @@ contract BokkyPooBahsEtherRefundablePrize is ERC20Token {
 
     // ------------------------------------------------------------------------
     // Token information
-    // ------------------------------------------------------------------------
-    // Tokens can be bought from this contract at the Buy Price. Tokens can be
-    // sold back to this contract at the Sell Price 
-    // 
-    // Period                                ETH per BERP
-    // ------------------------- ------------------------
-    // From         To               Buy Price Sell Price
-    // ------------ ------------ ------------- ----------
-    // start        +7 days             0.0010     0.0010
-    // +7 days      +30 days            0.0011     0.0010
-    // +30 days     +60 days            0.0012     0.0010
-    // +60 days     +90 days            0.0013     0.0010
-    // +90 days     +365 days           0.0015     0.0010
-    // +365 days    forever          1000.0000     0.0010
     // ------------------------------------------------------------------------
     string public constant symbol = "BERP";
     string public constant name = "BokkyPooBah Ether Refundable Prize";
