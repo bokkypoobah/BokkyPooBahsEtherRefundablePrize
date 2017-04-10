@@ -2,7 +2,7 @@ var accounts = [];
 var accountNames = {};
 
 addAccount(eth.accounts[0], "Account #0 - Miner");
-addAccount(eth.accounts[1], "Account #1 - BARF Owner");
+addAccount(eth.accounts[1], "Account #1 - BERP Owner");
 addAccount(eth.accounts[2], "Account #2 - Member #1");
 addAccount(eth.accounts[3], "Account #3 - Member #2");
 addAccount(eth.accounts[4], "Account #4 - Member #3");
@@ -144,9 +144,9 @@ function printContractDynamicDetails() {
   var contract = eth.contract(contractAbi).at(contractAddress);
 
   var buyPrice = contract.buyPrice();
-  console.log("RESULT: contract.buyPrice=" + web3.fromWei(buyPrice, "ether") + " ETH per BARF");
+  console.log("RESULT: contract.buyPrice=" + web3.fromWei(buyPrice, "ether") + " ETH per BERP");
   var sellPrice = contract.sellPrice();
-  console.log("RESULT: contract.sellPrice=" + web3.fromWei(sellPrice, "ether") + " ETH per BARF");
+  console.log("RESULT: contract.sellPrice=" + web3.fromWei(sellPrice, "ether") + " ETH per BERP");
   var totalSupply = contract.totalSupply();
   console.log("RESULT: contract.totalSupply=" + web3.fromWei(totalSupply, "ether"));
   var currentEtherBalance = contract.currentEtherBalance();
@@ -180,23 +180,23 @@ function printContractDynamicDetails() {
   });
   withdrawnEvent.stopWatching();
 
-  var memberBoughtTokenEvent = contract.MemberBoughtToken({}, { fromBlock: 0, toBlock: "latest" });
+  var tokensBoughtEvent = contract.TokensBought({}, { fromBlock: 0, toBlock: "latest" });
   i = 0;
-  memberBoughtTokenEvent.watch(function (error, result) {
-    console.log("RESULT: MemberBoughtToken Event " + i++ + ": buyer " + result.args.buyer + " ethers " + web3.fromWei(result.args.ethers, "ether") +
+  tokensBoughtEvent.watch(function (error, result) {
+    console.log("RESULT: TokensBought Event " + i++ + ": buyer " + result.args.buyer + " ethers " + web3.fromWei(result.args.ethers, "ether") +
       " newEtherBalance " + web3.fromWei(result.args.newEtherBalance, "ether") + " tokens " + web3.fromWei(result.args.tokens, "ether") +
       " newTotalSupply " + web3.fromWei(result.args.newTotalSupply, "ether") + " buyPrice " + web3.fromWei(result.args.buyPrice, "ether") +
       " block " + result.blockNumber);
   });
-  memberBoughtTokenEvent.stopWatching();
+  tokensBoughtEvent.stopWatching();
 
-  var memberSoldTokenEvent = contract.MemberSoldToken({}, { fromBlock: 0, toBlock: "latest" });
+  var tokensSoldEvent = contract.TokensSold({}, { fromBlock: 0, toBlock: "latest" });
   i = 0;
-  memberSoldTokenEvent.watch(function (error, result) {
-    console.log("RESULT: MemberSoldToken Event " + i++ + ": seller " + result.args.seller + " ethers " + web3.fromWei(result.args.ethers, "ether") +
+  tokensSoldEvent.watch(function (error, result) {
+    console.log("RESULT: TokensSold Event " + i++ + ": seller " + result.args.seller + " ethers " + web3.fromWei(result.args.ethers, "ether") +
       " newEtherBalance " + web3.fromWei(result.args.newEtherBalance, "ether") + " tokens " + web3.fromWei(result.args.tokens, "ether") +
       " newTotalSupply " + web3.fromWei(result.args.newTotalSupply, "ether") + " sellPrice " + web3.fromWei(result.args.sellPrice, "ether") +
       " block " + result.blockNumber);
   });
-  memberSoldTokenEvent.stopWatching();
+  tokensSoldEvent.stopWatching();
 }

@@ -3,14 +3,14 @@ pragma solidity ^0.4.8;
 // ----------------------------------------------------------------------------
 // BokkyPooBah's Ether Refundable Prize
 //
-// A gift token backed by ethers
+// A gift token backed by ethers. Holders of this token can always sell back
+// their tokens to this contract at a known price
 //
 // Based on Vlad's Safe Token Sale Mechanism Contract
 // - https://medium.com/@Vlad_Zamfir/a-safe-token-sale-mechanism-8d73c430ddd1
 //
-// Enjoy. (c) Bok Consulting Pty Ltd 2017. The MIT Licence.
+// Enjoy. (c) BokkyPooBah / Bok Consulting Pty Ltd 2017. The MIT Licence.
 // ----------------------------------------------------------------------------
-
 
 contract Owned {
     address public owner;
@@ -66,10 +66,13 @@ contract ERC20Token is Owned {
         }
     }
 
-    // Allow _spender to withdraw from your account, multiple times, up to the _value amount.
-    // If this function is called again it overwrites the current allowance with _value.
-    // this function is required for some DEX functionality
-    function approve(address _spender, uint256 _amount) returns (bool success) {
+    // Allow _spender to withdraw from your account, multiple times, up to the
+    // _value amount. If this function is called again it overwrites the
+    // current allowance with _value.
+    function approve(
+        address _spender,
+        uint256 _amount
+    ) returns (bool success) {
         allowed[msg.sender][_spender] = _amount;
         Approval(msg.sender, _spender, _amount);
         return true;
@@ -97,25 +100,28 @@ contract ERC20Token is Owned {
         }
     }
 
-    // Returns the amount of tokens approved by the owner that can be transferred
-    // to the spender's account
-    function allowance(address _owner, address _spender) constant returns (uint256 remaining) {
+    // Returns the amount of tokens approved by the owner that can be
+    // transferred to the spender's account
+    function allowance(
+        address _owner, 
+        address _spender
+    ) constant returns (uint256 remaining) {
         return allowed[_owner][_spender];
     }
 
     event Transfer(address indexed _from, address indexed _to, uint256 _value);
-    event Approval(address indexed _owner, address indexed _spender, uint256 _value);
+    event Approval(address indexed _owner, address indexed _spender,
+        uint256 _value);
 }
 
 
 contract BokkyPooBahsEtherRefundablePrize is ERC20Token {
 
-    // ------ Token information ------
-    // Tokens can be bought from this contract at the 
-    // Buy Price. Tokens can be sold to this contract at
-    // the Sell Price 
-    // 
     // ------------------------------------------------------------------------
+    // Token information
+    // ------------------------------------------------------------------------
+    // Tokens can be bought from this contract at the Buy Price. Tokens can be
+    // sold back to this contract at the Sell Price 
     // 
     // Period                                ETH per BERP
     // ------------------------- ------------------------
@@ -138,55 +144,51 @@ contract BokkyPooBahsEtherRefundablePrize is ERC20Token {
         deployedAt = now;
     }
 
+    // ------------------------------------------------------------------------
     // Members buy tokens from this contract at this price
     //
-    // This is a maximum price that the tokens should be bought for buyers
+    // This is a maximum price that the tokens should be bought at, as buyers
     // can always buy tokens from this contract for this price
     //
     // Check out the BARF prices on https://cryptoderivatives.market/ to see
     // if you can buy these tokens for less than this maximum price
+    // ------------------------------------------------------------------------
+    function buyPrice() constant returns (uint256) {
+        return buyPriceAt(now);
+    }
+
     function buyPriceAt(uint256 at) constant returns (uint256) {
-        if (at < 1491783533) {
+        if (at < (deployedAt + 1 minutes)) {
             return 10 * 10**14;
-        } else if (at < 1491783533) {
+        } else if (at < (deployedAt + 2 minutes)) {
             return 11 * 10**14;
-        } else if (at < 1491783533) {
+        } else if (at < (deployedAt + 3 minutes)) {
             return 12 * 10**15;
-        } else if (at < 1491783533) {
+        } else if (at < (deployedAt + 4 minutes)) {
             return 13 * 10**15;
-        } else if (at < 1491783533) {
+        } else if (at < (deployedAt + 5 minutes)) {
             return 15 * 10**16;
         } else {
             return 10**21;
         }
     }
 
-    function buyPrice() constant returns (uint256) {
-        return buyPriceAt(now);
-    }
-
+    // ------------------------------------------------------------------------
     // Members can always sell to the contract at 1 BARF = 0.01 ETH
     //
-    // This is a minimum price that the tokens should sell for as the owner of
+    // This is a minimum price that the tokens should sell for, as the owner of
     // the token can always sell tokens to this contract at this price
     //
     // Check out the BARF prices on https://cryptoderivatives.market/ to see
     // if you can sell these tokens for more than this minimum price
+    // ------------------------------------------------------------------------
     function sellPrice() constant returns (uint256) {
         return 10**15;
     }
 
-    // ------ Owner Withdrawal ------
-    function amountOfEthersOwnerCanWithdraw() constant returns (uint256) {
-        uint256 etherBalance = this.balance;
-        uint256 ethersSupportingTokens = _totalSupply * sellPrice() / 1 ether;
-        if (etherBalance > ethersSupportingTokens) {
-            return etherBalance - ethersSupportingTokens;
-        } else {
-            return 0;
-        }
-    }
-
+    // ------------------------------------------------------------------------
+    // Owner Withdrawal
+    // ------------------------------------------------------------------------
     function ownerWithdraw(uint256 amount) onlyOwner {
         uint256 maxWithdrawalAmount = amountOfEthersOwnerCanWithdraw();
         if (amount > maxWithdrawalAmount) {
@@ -198,7 +200,9 @@ contract BokkyPooBahsEtherRefundablePrize is ERC20Token {
     event Withdrawn(uint256 amount, uint256 remainingWithdrawal);
 
 
-    // ------ Buy and Sell tokens from/to the contract ------
+    // ------------------------------------------------------------------------
+    // Buy and Sell tokens from/to the contract
+    // ------------------------------------------------------------------------
     function () payable {
         buyTokens();
     }
@@ -208,12 +212,13 @@ contract BokkyPooBahsEtherRefundablePrize is ERC20Token {
             uint tokens = msg.value * 1 ether / buyPrice();
             _totalSupply += tokens;
             balances[msg.sender] += tokens;
-            TokensBought(msg.sender, msg.value, this.balance, tokens, _totalSupply,
-                buyPrice());
+            TokensBought(msg.sender, msg.value, this.balance, tokens,
+                 _totalSupply, buyPrice());
         }
     }
-    event TokensBought(address indexed buyer, uint256 ethers, uint256 newEtherBalance,
-        uint256 tokens, uint256 newTotalSupply, uint256 buyPrice);
+    event TokensBought(address indexed buyer, uint256 ethers, 
+        uint256 newEtherBalance, uint256 tokens, uint256 newTotalSupply, 
+        uint256 buyPrice);
 
     function sellTokens(uint256 amountOfTokens) {
         if (amountOfTokens > balances[msg.sender]) throw;
@@ -224,11 +229,24 @@ contract BokkyPooBahsEtherRefundablePrize is ERC20Token {
         TokensSold(msg.sender, ethersToSend, this.balance, amountOfTokens,
             _totalSupply, sellPrice());
     }
-    event TokensSold(address indexed seller, uint256 ethers, uint256 newEtherBalance,
-        uint256 tokens, uint256 newTotalSupply, uint256 sellPrice);
+    event TokensSold(address indexed seller, uint256 ethers, 
+        uint256 newEtherBalance, uint256 tokens, uint256 newTotalSupply, 
+        uint256 sellPrice);
 
 
-    // ------ Information function ------
+    // ------------------------------------------------------------------------
+    // Information function
+    // ------------------------------------------------------------------------
+    function amountOfEthersOwnerCanWithdraw() constant returns (uint256) {
+        uint256 etherBalance = this.balance;
+        uint256 ethersSupportingTokens = _totalSupply * sellPrice() / 1 ether;
+        if (etherBalance > ethersSupportingTokens) {
+            return etherBalance - ethersSupportingTokens;
+        } else {
+            return 0;
+        }
+    }
+
     function currentEtherBalance() constant returns (uint256) {
         return this.balance;
     }
