@@ -1,9 +1,9 @@
 #!/bin/sh
-# --------------------------------------------------------------------
-# Testing BokkyPooBah's Autonomous Refundathon Facility Token Contract
+# -----------------------------------------------------------------------------
+# Testing BokkyPooBah's Ether Refundable Prize Token Contract
 #
-# (c) (c) Bok Consulting Pty Ltd & Incent Rewards 2017. The MIT licence.
-# --------------------------------------------------------------------
+# (c) BokkyPooBah / Bok Consulting Pty Ltd 2017. The MIT licence.
+# -----------------------------------------------------------------------------
 
 GETHATTACHPOINT=`grep ^IPCFILE= settings.txt | sed "s/^.*=//"`
 PASSWORD=`grep ^PASSWORD= settings.txt | sed "s/^.*=//"`

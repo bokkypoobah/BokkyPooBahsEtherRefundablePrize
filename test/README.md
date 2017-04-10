@@ -13,4 +13,4 @@ Detailed results are in the test*output.txt. Summary of results are in the test*
 These test were run using geth 1.5.9-stable and solc 0.4.9+commit.364da425.Darwin.appleclang .
 
 
-Enjoy. (c) BokkyPooBah @ Bok Consulting Pty Ltd 2017. The MIT licence.
+Enjoy. (c) BokkyPooBah / Bok Consulting Pty Ltd 2017. The MIT Licence.

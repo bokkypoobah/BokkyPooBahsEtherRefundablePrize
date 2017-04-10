@@ -1,5 +1,5 @@
 # Account                                                   EtherBalance                TokenBalance Name
-1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100000.000000000000000000        0.000000000000000000 Account #0 - Miner
+1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100370.000000000000000000        0.000000000000000000 Account #0 - Miner
 2 0x0014060ff383c9b21c6840a3b14aab06741e5c49   100000.000000000000000000        0.000000000000000000 Account #1 - BARF Owner
 3 0x0020017ba4c67f76c76b1af8c41821ee54f37171   100000.000000000000000000        0.000000000000000000 Account #2 - Member #1
 4 0x0036f6addb6d64684390f55a92f0f4988266901b   100000.000000000000000000        0.000000000000000000 Account #3 - Member #2
@@ -7,123 +7,67 @@
 6 0x0055fbc1ada89056088c75eaf50400af6756ae61   100000.000000000000000000        0.000000000000000000 Account #5 - Member #4
 7 0x006b2baf3000413d83d257086fd3434a109aa552   100000.000000000000000000        0.000000000000000000 Account #6 - Member #5
 Test 1.1 Deploy BARF Contract
-barfAddress=0xebb2634dd3194ba6d75eeb049cd0f73bf9801d95 gas=4000000 gasUsed=951318 cost=0.0207217989396 block=2 txId=0xc41fa060e9fc4aaba73b4ed37dc7eefdb4746ef3e8112999764d43509eb27617
 # Account                                                   EtherBalance                TokenBalance Name
-1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100010.020721798939600000        0.000000000000000000 Account #0 - Miner
-2 0x0014060ff383c9b21c6840a3b14aab06741e5c49    99999.979278201060400000        0.000000000000000000 Account #1 - BARF Owner
+1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100370.000000000000000000        0.000000000000000000 Account #0 - Miner
+2 0x0014060ff383c9b21c6840a3b14aab06741e5c49   100000.000000000000000000        0.000000000000000000 Account #1 - BARF Owner
 3 0x0020017ba4c67f76c76b1af8c41821ee54f37171   100000.000000000000000000        0.000000000000000000 Account #2 - Member #1
 4 0x0036f6addb6d64684390f55a92f0f4988266901b   100000.000000000000000000        0.000000000000000000 Account #3 - Member #2
 5 0x004e64833635cd1056b948b57286b7c91e62731c   100000.000000000000000000        0.000000000000000000 Account #4 - Member #3
 6 0x0055fbc1ada89056088c75eaf50400af6756ae61   100000.000000000000000000        0.000000000000000000 Account #5 - Member #4
 7 0x006b2baf3000413d83d257086fd3434a109aa552   100000.000000000000000000        0.000000000000000000 Account #6 - Member #5
-8 0xebb2634dd3194ba6d75eeb049cd0f73bf9801d95        0.000000000000000000        0.000000000000000000 BARF
-contract.deployedAt=1491725439 Sun, 09 Apr 2017 18:10:39 AEST
-contract.symbol=BARF
-contract.name=BokkyPooBah Autonomous Refundathon Facility
-contract.decimals=18
-contract.buyPrice=0.01 ETH per BARF
-contract.sellPrice=0.01 ETH per BARF
-contract.totalSupply=0
-contract.currentEtherBalance=0
-contract.currentTokenBalance=0
-contract.amountOfEthersOwnerCanWithdraw=0
-PASS Test 1.1 Deploy BARF Contract
+FAIL Test 1.1 Deploy BARF Contract
   CHECK 1. BARF Owner pays a little gas
 
 Test 1.2 Member1 buys tokens in first period when 1 BARF = 0.01 ETH
 # Account                                                   EtherBalance                TokenBalance Name
-1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100025.022092530892096048        0.000000000000000000 Account #0 - Miner
-2 0x0014060ff383c9b21c6840a3b14aab06741e5c49    99999.979278201060400000        0.000000000000000000 Account #1 - BARF Owner
-3 0x0020017ba4c67f76c76b1af8c41821ee54f37171    99987.458629268047503952     1254.000000000000000000 Account #2 - Member #1
+1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100370.000000000000000000        0.000000000000000000 Account #0 - Miner
+2 0x0014060ff383c9b21c6840a3b14aab06741e5c49   100000.000000000000000000        0.000000000000000000 Account #1 - BARF Owner
+3 0x0020017ba4c67f76c76b1af8c41821ee54f37171   100000.000000000000000000        0.000000000000000000 Account #2 - Member #1
 4 0x0036f6addb6d64684390f55a92f0f4988266901b   100000.000000000000000000        0.000000000000000000 Account #3 - Member #2
 5 0x004e64833635cd1056b948b57286b7c91e62731c   100000.000000000000000000        0.000000000000000000 Account #4 - Member #3
 6 0x0055fbc1ada89056088c75eaf50400af6756ae61   100000.000000000000000000        0.000000000000000000 Account #5 - Member #4
 7 0x006b2baf3000413d83d257086fd3434a109aa552   100000.000000000000000000        0.000000000000000000 Account #6 - Member #5
-8 0xebb2634dd3194ba6d75eeb049cd0f73bf9801d95       12.540000000000000000        0.000000000000000000 BARF
-contract.buyPrice=0.01 ETH per BARF
-contract.sellPrice=0.01 ETH per BARF
-contract.totalSupply=1254
-contract.currentEtherBalance=12.54
-contract.currentTokenBalance=1254
-contract.amountOfEthersOwnerCanWithdraw=0
-MemberBoughtToken Event 0: buyer 0x0020017ba4c67f76c76b1af8c41821ee54f37171 ethers 12.54 newEtherBalance 12.54 tokens 1254 newTotalSupply 1254 buyPrice 0.01 block 5
-tx12 gas=4500000 gasUsed=64833 cost=0.001370731952496048 block=5 txId=0x3f8ebfde890e3fabc709a1835aad43454d3521d7101bffab22e2af364e5cae2c
-PASS Test 1.2 Member1 buys tokens in first period when 1 BARF = 0.01 ETH
   CHECK 1. Member1 ether balance -12.54 ETH
   CHECK 2. Member1 token balance +1,254 BARF
   CHECK 3. BARF contract ether balance +12.54 ETH
 
 Test 1.3 Member1 transfers 1254 BARF to member2
 # Account                                                   EtherBalance                TokenBalance Name
-1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100035.022843866538802420        0.000000000000000000 Account #0 - Miner
-2 0x0014060ff383c9b21c6840a3b14aab06741e5c49    99999.979278201060400000        0.000000000000000000 Account #1 - BARF Owner
-3 0x0020017ba4c67f76c76b1af8c41821ee54f37171    99987.457877932400797580        0.000000000000000000 Account #2 - Member #1
-4 0x0036f6addb6d64684390f55a92f0f4988266901b   100000.000000000000000000     1254.000000000000000000 Account #3 - Member #2
+1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100370.000000000000000000        0.000000000000000000 Account #0 - Miner
+2 0x0014060ff383c9b21c6840a3b14aab06741e5c49   100000.000000000000000000        0.000000000000000000 Account #1 - BARF Owner
+3 0x0020017ba4c67f76c76b1af8c41821ee54f37171   100000.000000000000000000        0.000000000000000000 Account #2 - Member #1
+4 0x0036f6addb6d64684390f55a92f0f4988266901b   100000.000000000000000000        0.000000000000000000 Account #3 - Member #2
 5 0x004e64833635cd1056b948b57286b7c91e62731c   100000.000000000000000000        0.000000000000000000 Account #4 - Member #3
 6 0x0055fbc1ada89056088c75eaf50400af6756ae61   100000.000000000000000000        0.000000000000000000 Account #5 - Member #4
 7 0x006b2baf3000413d83d257086fd3434a109aa552   100000.000000000000000000        0.000000000000000000 Account #6 - Member #5
-8 0xebb2634dd3194ba6d75eeb049cd0f73bf9801d95       12.540000000000000000        0.000000000000000000 BARF
-contract.buyPrice=0.01 ETH per BARF
-contract.sellPrice=0.01 ETH per BARF
-contract.totalSupply=1254
-contract.currentEtherBalance=12.54
-contract.currentTokenBalance=1254
-contract.amountOfEthersOwnerCanWithdraw=0
-Transfer Event 0: from 0x0020017ba4c67f76c76b1af8c41821ee54f37171 to 0x0036f6addb6d64684390f55a92f0f4988266901b 1254 block 7
-MemberBoughtToken Event 0: buyer 0x0020017ba4c67f76c76b1af8c41821ee54f37171 ethers 12.54 newEtherBalance 12.54 tokens 1254 newTotalSupply 1254 buyPrice 0.01 block 5
-tx13 gas=4500000 gasUsed=36281 cost=0.000751335646706372 block=7 txId=0xcd0d98fa0324190f6c0fd5e82076ac869afd6cf6ebeb227d8c26c52aa0dae92c
-PASS Test 1.3 Member1 transfers 1254 BARF to member2
   CHECK 1. Member1 token balance -1,254 BARF
   CHECK 2. Member2 token balance +1,254 BARF
 
 Test 1.4 Member2 sells tokens in first period when 1 BARF = 0.01 ETH
 # Account                                                   EtherBalance                TokenBalance Name
-1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100045.023274369110321110        0.000000000000000000 Account #0 - Miner
-2 0x0014060ff383c9b21c6840a3b14aab06741e5c49    99999.979278201060400000        0.000000000000000000 Account #1 - BARF Owner
-3 0x0020017ba4c67f76c76b1af8c41821ee54f37171    99987.457877932400797580        0.000000000000000000 Account #2 - Member #1
-4 0x0036f6addb6d64684390f55a92f0f4988266901b   100012.539569497428481310        0.000000000000000000 Account #3 - Member #2
+1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100370.000000000000000000        0.000000000000000000 Account #0 - Miner
+2 0x0014060ff383c9b21c6840a3b14aab06741e5c49   100000.000000000000000000        0.000000000000000000 Account #1 - BARF Owner
+3 0x0020017ba4c67f76c76b1af8c41821ee54f37171   100000.000000000000000000        0.000000000000000000 Account #2 - Member #1
+4 0x0036f6addb6d64684390f55a92f0f4988266901b   100000.000000000000000000        0.000000000000000000 Account #3 - Member #2
 5 0x004e64833635cd1056b948b57286b7c91e62731c   100000.000000000000000000        0.000000000000000000 Account #4 - Member #3
 6 0x0055fbc1ada89056088c75eaf50400af6756ae61   100000.000000000000000000        0.000000000000000000 Account #5 - Member #4
 7 0x006b2baf3000413d83d257086fd3434a109aa552   100000.000000000000000000        0.000000000000000000 Account #6 - Member #5
-8 0xebb2634dd3194ba6d75eeb049cd0f73bf9801d95        0.000000000000000000        0.000000000000000000 BARF
-contract.buyPrice=0.02 ETH per BARF
-contract.sellPrice=0.01 ETH per BARF
-contract.totalSupply=0
-contract.currentEtherBalance=0
-contract.currentTokenBalance=0
-contract.amountOfEthersOwnerCanWithdraw=0
-Transfer Event 0: from 0x0020017ba4c67f76c76b1af8c41821ee54f37171 to 0x0036f6addb6d64684390f55a92f0f4988266901b 1254 block 7
-MemberBoughtToken Event 0: buyer 0x0020017ba4c67f76c76b1af8c41821ee54f37171 ethers 12.54 newEtherBalance 12.54 tokens 1254 newTotalSupply 1254 buyPrice 0.01 block 5
-MemberSoldToken Event 0: seller 0x0036f6addb6d64684390f55a92f0f4988266901b ethers 12.54 newEtherBalance 0 tokens 1254 newTotalSupply 0 sellPrice 0.01 block 9
-tx14 gas=4500000 gasUsed=21194 cost=0.00043050257151869 block=9 txId=0xe88e4632bd98782b8fb66e16f9bd929f19d733c5c6a84d3966a28ff813988534
-PASS Test 1.4 Member2 sells tokens in first period when 1 BARF = 0.01 ETH
   CHECK 1. Member2 token balance 0 BARF
   CHECK 2. BARF contract ether balance 0 ETH
   CHECK 2. contract.amountOfEthersOwnerCanWithdraw 0 ETH
 
 Test 2.1 Member3 buys tokens in the second period when 1 BARF = 0.02 ETH
-Waiting until after 1491725461 Sun, 09 Apr 2017 18:11:01 AEST currentDate=Sun, 09 Apr 2017 18:11:13 AEST
-Waited until after 1491725461 Sun, 09 Apr 2017 18:11:01 AEST currentDate=Sun, 09 Apr 2017 18:11:13 AEST
+Waiting until after 1491781440 Mon, 10 Apr 2017 09:44:00 AEST currentDate=Mon, 10 Apr 2017 09:43:10 AEST
+Waited until after 1491781440 Mon, 10 Apr 2017 09:44:00 AEST currentDate=Mon, 10 Apr 2017 09:44:00 AEST
 # Account                                                   EtherBalance                TokenBalance Name
-1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100055.024558969110321110        0.000000000000000000 Account #0 - Miner
-2 0x0014060ff383c9b21c6840a3b14aab06741e5c49    99999.979278201060400000        0.000000000000000000 Account #1 - BARF Owner
-3 0x0020017ba4c67f76c76b1af8c41821ee54f37171    99987.457877932400797580        0.000000000000000000 Account #2 - Member #1
-4 0x0036f6addb6d64684390f55a92f0f4988266901b   100012.539569497428481310        0.000000000000000000 Account #3 - Member #2
-5 0x004e64833635cd1056b948b57286b7c91e62731c    99899.998715400000000000     5000.000000000000000000 Account #4 - Member #3
+1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100440.001060000000000000        0.000000000000000000 Account #0 - Miner
+2 0x0014060ff383c9b21c6840a3b14aab06741e5c49   100000.000000000000000000        0.000000000000000000 Account #1 - BARF Owner
+3 0x0020017ba4c67f76c76b1af8c41821ee54f37171   100000.000000000000000000        0.000000000000000000 Account #2 - Member #1
+4 0x0036f6addb6d64684390f55a92f0f4988266901b   100000.000000000000000000        0.000000000000000000 Account #3 - Member #2
+5 0x004e64833635cd1056b948b57286b7c91e62731c    99899.998940000000000000        0.000000000000000000 Account #4 - Member #3
 6 0x0055fbc1ada89056088c75eaf50400af6756ae61   100000.000000000000000000        0.000000000000000000 Account #5 - Member #4
 7 0x006b2baf3000413d83d257086fd3434a109aa552   100000.000000000000000000        0.000000000000000000 Account #6 - Member #5
-8 0xebb2634dd3194ba6d75eeb049cd0f73bf9801d95      100.000000000000000000        0.000000000000000000 BARF
-contract.buyPrice=0.02 ETH per BARF
-contract.sellPrice=0.01 ETH per BARF
-contract.totalSupply=5000
-contract.currentEtherBalance=100
-contract.currentTokenBalance=5000
-contract.amountOfEthersOwnerCanWithdraw=50
-Transfer Event 0: from 0x0020017ba4c67f76c76b1af8c41821ee54f37171 to 0x0036f6addb6d64684390f55a92f0f4988266901b 1254 block 7
-MemberBoughtToken Event 0: buyer 0x0020017ba4c67f76c76b1af8c41821ee54f37171 ethers 12.54 newEtherBalance 12.54 tokens 1254 newTotalSupply 1254 buyPrice 0.01 block 5
-MemberBoughtToken Event 1: buyer 0x004e64833635cd1056b948b57286b7c91e62731c ethers 100 newEtherBalance 100 tokens 5000 newTotalSupply 5000 buyPrice 0.02 block 11
-MemberSoldToken Event 0: seller 0x0036f6addb6d64684390f55a92f0f4988266901b ethers 12.54 newEtherBalance 0 tokens 1254 newTotalSupply 0 sellPrice 0.01 block 9
-tx21 gas=400000 gasUsed=64230 cost=0.0012846 block=11 txId=0x33bca73dacd341f7454d6fc7ddd177e9ece2718aac9d54eaee3bc09fd7056d8d
+tx21 gas=400000 gasUsed=53000 cost=0.00106 block=88 txId=0xfef6f9245f8337fa0dcdac7c43eed4798a8d4b6eca3d10d1046e28f6f501695b
 PASS Test 2.1 Member3 buys tokens in the second period when 1 BARF = 0.02 ETH
   CHECK 1. Member3 ether balance -100 ETH
   CHECK 2. Member3 token balance +5,000 BARF
@@ -132,108 +76,50 @@ PASS Test 2.1 Member3 buys tokens in the second period when 1 BARF = 0.02 ETH
 
 Test 2.2 Member3 approves a transfer of 2000 BARF to member2
 # Account                                                   EtherBalance                TokenBalance Name
-1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100065.025468789110321110        0.000000000000000000 Account #0 - Miner
-2 0x0014060ff383c9b21c6840a3b14aab06741e5c49    99999.979278201060400000        0.000000000000000000 Account #1 - BARF Owner
-3 0x0020017ba4c67f76c76b1af8c41821ee54f37171    99987.457877932400797580        0.000000000000000000 Account #2 - Member #1
-4 0x0036f6addb6d64684390f55a92f0f4988266901b   100012.539569497428481310        0.000000000000000000 Account #3 - Member #2
-5 0x004e64833635cd1056b948b57286b7c91e62731c    99899.997805580000000000     5000.000000000000000000 Account #4 - Member #3
+1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100440.001060000000000000        0.000000000000000000 Account #0 - Miner
+2 0x0014060ff383c9b21c6840a3b14aab06741e5c49   100000.000000000000000000        0.000000000000000000 Account #1 - BARF Owner
+3 0x0020017ba4c67f76c76b1af8c41821ee54f37171   100000.000000000000000000        0.000000000000000000 Account #2 - Member #1
+4 0x0036f6addb6d64684390f55a92f0f4988266901b   100000.000000000000000000        0.000000000000000000 Account #3 - Member #2
+5 0x004e64833635cd1056b948b57286b7c91e62731c    99899.998940000000000000        0.000000000000000000 Account #4 - Member #3
 6 0x0055fbc1ada89056088c75eaf50400af6756ae61   100000.000000000000000000        0.000000000000000000 Account #5 - Member #4
 7 0x006b2baf3000413d83d257086fd3434a109aa552   100000.000000000000000000        0.000000000000000000 Account #6 - Member #5
-8 0xebb2634dd3194ba6d75eeb049cd0f73bf9801d95      100.000000000000000000        0.000000000000000000 BARF
-contract.buyPrice=0.02 ETH per BARF
-contract.sellPrice=0.01 ETH per BARF
-contract.totalSupply=5000
-contract.currentEtherBalance=100
-contract.currentTokenBalance=5000
-contract.amountOfEthersOwnerCanWithdraw=50
-Transfer Event 0: from 0x0020017ba4c67f76c76b1af8c41821ee54f37171 to 0x0036f6addb6d64684390f55a92f0f4988266901b 1254 block 7
-Approval Event 0: owner 0x004e64833635cd1056b948b57286b7c91e62731c spender 0x0036f6addb6d64684390f55a92f0f4988266901b 2000 block 13
-MemberBoughtToken Event 0: buyer 0x0020017ba4c67f76c76b1af8c41821ee54f37171 ethers 12.54 newEtherBalance 12.54 tokens 1254 newTotalSupply 1254 buyPrice 0.01 block 5
-MemberBoughtToken Event 1: buyer 0x004e64833635cd1056b948b57286b7c91e62731c ethers 100 newEtherBalance 100 tokens 5000 newTotalSupply 5000 buyPrice 0.02 block 11
-MemberSoldToken Event 0: seller 0x0036f6addb6d64684390f55a92f0f4988266901b ethers 12.54 newEtherBalance 0 tokens 1254 newTotalSupply 0 sellPrice 0.01 block 9
-tx22 gas=4500000 gasUsed=45491 cost=0.00090982 block=13 txId=0xb9d944e197a040f3838c3ea6532c7c1b2ceac9e872bc5cf22d35f29415177df5
-PASS Test 2.2 Member3 approves a transfer of 2000 BARF to member2
   CHECK 1. Approval event generated for 2000 BARF
 
 Test 2.3 Member2 transfer 1,000 BARF from member3
 # Account                                                   EtherBalance                TokenBalance Name
-1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100075.026626569110321110        0.000000000000000000 Account #0 - Miner
-2 0x0014060ff383c9b21c6840a3b14aab06741e5c49    99999.979278201060400000        0.000000000000000000 Account #1 - BARF Owner
-3 0x0020017ba4c67f76c76b1af8c41821ee54f37171    99987.457877932400797580        0.000000000000000000 Account #2 - Member #1
-4 0x0036f6addb6d64684390f55a92f0f4988266901b   100012.538411717428481310     1000.000000000000000000 Account #3 - Member #2
-5 0x004e64833635cd1056b948b57286b7c91e62731c    99899.997805580000000000     4000.000000000000000000 Account #4 - Member #3
+1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100440.001060000000000000        0.000000000000000000 Account #0 - Miner
+2 0x0014060ff383c9b21c6840a3b14aab06741e5c49   100000.000000000000000000        0.000000000000000000 Account #1 - BARF Owner
+3 0x0020017ba4c67f76c76b1af8c41821ee54f37171   100000.000000000000000000        0.000000000000000000 Account #2 - Member #1
+4 0x0036f6addb6d64684390f55a92f0f4988266901b   100000.000000000000000000        0.000000000000000000 Account #3 - Member #2
+5 0x004e64833635cd1056b948b57286b7c91e62731c    99899.998940000000000000        0.000000000000000000 Account #4 - Member #3
 6 0x0055fbc1ada89056088c75eaf50400af6756ae61   100000.000000000000000000        0.000000000000000000 Account #5 - Member #4
 7 0x006b2baf3000413d83d257086fd3434a109aa552   100000.000000000000000000        0.000000000000000000 Account #6 - Member #5
-8 0xebb2634dd3194ba6d75eeb049cd0f73bf9801d95      100.000000000000000000        0.000000000000000000 BARF
-contract.buyPrice=10000 ETH per BARF
-contract.sellPrice=0.01 ETH per BARF
-contract.totalSupply=5000
-contract.currentEtherBalance=100
-contract.currentTokenBalance=5000
-contract.amountOfEthersOwnerCanWithdraw=50
-Transfer Event 0: from 0x0020017ba4c67f76c76b1af8c41821ee54f37171 to 0x0036f6addb6d64684390f55a92f0f4988266901b 1254 block 7
-Transfer Event 1: from 0x004e64833635cd1056b948b57286b7c91e62731c to 0x0036f6addb6d64684390f55a92f0f4988266901b 1000 block 15
-Approval Event 0: owner 0x004e64833635cd1056b948b57286b7c91e62731c spender 0x0036f6addb6d64684390f55a92f0f4988266901b 2000 block 13
-MemberBoughtToken Event 0: buyer 0x0020017ba4c67f76c76b1af8c41821ee54f37171 ethers 12.54 newEtherBalance 12.54 tokens 1254 newTotalSupply 1254 buyPrice 0.01 block 5
-MemberBoughtToken Event 1: buyer 0x004e64833635cd1056b948b57286b7c91e62731c ethers 100 newEtherBalance 100 tokens 5000 newTotalSupply 5000 buyPrice 0.02 block 11
-MemberSoldToken Event 0: seller 0x0036f6addb6d64684390f55a92f0f4988266901b ethers 12.54 newEtherBalance 0 tokens 1254 newTotalSupply 0 sellPrice 0.01 block 9
-tx23 gas=4500000 gasUsed=57889 cost=0.00115778 block=15 txId=0x5ccbcb439613a52105c5917e1c3a5e692e3db836ea0989d5a35c78d010b2b74a
-PASS Test 2.3 Member2 transfer 1,000 BARF from member3
   CHECK 1. Member2 ether balance +1,000 ETH
   CHECK 2. Member3 token balance -1,000 BARF
 
 Test 2.4 Member2 transfer 10,000 BARF from member3 - unsuccessful
 # Account                                                   EtherBalance                TokenBalance Name
-1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100090.027130349110321110        0.000000000000000000 Account #0 - Miner
-2 0x0014060ff383c9b21c6840a3b14aab06741e5c49    99999.979278201060400000        0.000000000000000000 Account #1 - BARF Owner
-3 0x0020017ba4c67f76c76b1af8c41821ee54f37171    99987.457877932400797580        0.000000000000000000 Account #2 - Member #1
-4 0x0036f6addb6d64684390f55a92f0f4988266901b   100012.537907937428481310     1000.000000000000000000 Account #3 - Member #2
-5 0x004e64833635cd1056b948b57286b7c91e62731c    99899.997805580000000000     4000.000000000000000000 Account #4 - Member #3
+1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100440.001060000000000000        0.000000000000000000 Account #0 - Miner
+2 0x0014060ff383c9b21c6840a3b14aab06741e5c49   100000.000000000000000000        0.000000000000000000 Account #1 - BARF Owner
+3 0x0020017ba4c67f76c76b1af8c41821ee54f37171   100000.000000000000000000        0.000000000000000000 Account #2 - Member #1
+4 0x0036f6addb6d64684390f55a92f0f4988266901b   100000.000000000000000000        0.000000000000000000 Account #3 - Member #2
+5 0x004e64833635cd1056b948b57286b7c91e62731c    99899.998940000000000000        0.000000000000000000 Account #4 - Member #3
 6 0x0055fbc1ada89056088c75eaf50400af6756ae61   100000.000000000000000000        0.000000000000000000 Account #5 - Member #4
 7 0x006b2baf3000413d83d257086fd3434a109aa552   100000.000000000000000000        0.000000000000000000 Account #6 - Member #5
-8 0xebb2634dd3194ba6d75eeb049cd0f73bf9801d95      100.000000000000000000        0.000000000000000000 BARF
-contract.buyPrice=10000 ETH per BARF
-contract.sellPrice=0.01 ETH per BARF
-contract.totalSupply=5000
-contract.currentEtherBalance=100
-contract.currentTokenBalance=5000
-contract.amountOfEthersOwnerCanWithdraw=50
-Transfer Event 0: from 0x0020017ba4c67f76c76b1af8c41821ee54f37171 to 0x0036f6addb6d64684390f55a92f0f4988266901b 1254 block 7
-Transfer Event 1: from 0x004e64833635cd1056b948b57286b7c91e62731c to 0x0036f6addb6d64684390f55a92f0f4988266901b 1000 block 15
-Approval Event 0: owner 0x004e64833635cd1056b948b57286b7c91e62731c spender 0x0036f6addb6d64684390f55a92f0f4988266901b 2000 block 13
-MemberBoughtToken Event 0: buyer 0x0020017ba4c67f76c76b1af8c41821ee54f37171 ethers 12.54 newEtherBalance 12.54 tokens 1254 newTotalSupply 1254 buyPrice 0.01 block 5
-MemberBoughtToken Event 1: buyer 0x004e64833635cd1056b948b57286b7c91e62731c ethers 100 newEtherBalance 100 tokens 5000 newTotalSupply 5000 buyPrice 0.02 block 11
-MemberSoldToken Event 0: seller 0x0036f6addb6d64684390f55a92f0f4988266901b ethers 12.54 newEtherBalance 0 tokens 1254 newTotalSupply 0 sellPrice 0.01 block 9
-tx24 gas=4500000 gasUsed=25189 cost=0.00050378 block=18 txId=0x14b9588f5c23502d8702c52e8e9191bd9906259583e08d83c818631fef56a331
-PASS Test 2.4 Member2 transfer 10,000 BARF from member3 - unsuccessful
   CHECK 1. IMPORTANT - No changes
 
 Test 3.1 Member4 buys tokens in the last period when 1 BARF = 1,000,000 ETH
-Waiting until after 1491725581 Sun, 09 Apr 2017 18:13:01 AEST currentDate=Sun, 09 Apr 2017 18:12:20 AEST
-Waited until after 1491725581 Sun, 09 Apr 2017 18:13:01 AEST currentDate=Sun, 09 Apr 2017 18:13:01 AEST
+Waiting until after 1491781560 Mon, 10 Apr 2017 09:46:00 AEST currentDate=Mon, 10 Apr 2017 09:44:18 AEST
+Waited until after 1491781560 Mon, 10 Apr 2017 09:46:00 AEST currentDate=Mon, 10 Apr 2017 09:46:00 AEST
 # Account                                                   EtherBalance                TokenBalance Name
-1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100170.028119989110321110        0.000000000000000000 Account #0 - Miner
-2 0x0014060ff383c9b21c6840a3b14aab06741e5c49    99999.979278201060400000        0.000000000000000000 Account #1 - BARF Owner
-3 0x0020017ba4c67f76c76b1af8c41821ee54f37171    99987.457877932400797580        0.000000000000000000 Account #2 - Member #1
-4 0x0036f6addb6d64684390f55a92f0f4988266901b   100012.537907937428481310     1000.000000000000000000 Account #3 - Member #2
-5 0x004e64833635cd1056b948b57286b7c91e62731c    99899.997805580000000000     4000.000000000000000000 Account #4 - Member #3
-6 0x0055fbc1ada89056088c75eaf50400af6756ae61    98999.999010360000000000        0.001000000000000000 Account #5 - Member #4
+1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100625.002120000000000000        0.000000000000000000 Account #0 - Miner
+2 0x0014060ff383c9b21c6840a3b14aab06741e5c49   100000.000000000000000000        0.000000000000000000 Account #1 - BARF Owner
+3 0x0020017ba4c67f76c76b1af8c41821ee54f37171   100000.000000000000000000        0.000000000000000000 Account #2 - Member #1
+4 0x0036f6addb6d64684390f55a92f0f4988266901b   100000.000000000000000000        0.000000000000000000 Account #3 - Member #2
+5 0x004e64833635cd1056b948b57286b7c91e62731c    99899.998940000000000000        0.000000000000000000 Account #4 - Member #3
+6 0x0055fbc1ada89056088c75eaf50400af6756ae61    98999.998940000000000000        0.000000000000000000 Account #5 - Member #4
 7 0x006b2baf3000413d83d257086fd3434a109aa552   100000.000000000000000000        0.000000000000000000 Account #6 - Member #5
-8 0xebb2634dd3194ba6d75eeb049cd0f73bf9801d95     1100.000000000000000000        0.000000000000000000 BARF
-contract.buyPrice=1000000 ETH per BARF
-contract.sellPrice=0.01 ETH per BARF
-contract.totalSupply=5000.001
-contract.currentEtherBalance=1100
-contract.currentTokenBalance=5000.001
-contract.amountOfEthersOwnerCanWithdraw=1049.99999
-Transfer Event 0: from 0x0020017ba4c67f76c76b1af8c41821ee54f37171 to 0x0036f6addb6d64684390f55a92f0f4988266901b 1254 block 7
-Transfer Event 1: from 0x004e64833635cd1056b948b57286b7c91e62731c to 0x0036f6addb6d64684390f55a92f0f4988266901b 1000 block 15
-Approval Event 0: owner 0x004e64833635cd1056b948b57286b7c91e62731c spender 0x0036f6addb6d64684390f55a92f0f4988266901b 2000 block 13
-MemberBoughtToken Event 0: buyer 0x0020017ba4c67f76c76b1af8c41821ee54f37171 ethers 12.54 newEtherBalance 12.54 tokens 1254 newTotalSupply 1254 buyPrice 0.01 block 5
-MemberBoughtToken Event 1: buyer 0x004e64833635cd1056b948b57286b7c91e62731c ethers 100 newEtherBalance 100 tokens 5000 newTotalSupply 5000 buyPrice 0.02 block 11
-MemberBoughtToken Event 2: buyer 0x0055fbc1ada89056088c75eaf50400af6756ae61 ethers 1000 newEtherBalance 1100 tokens 0.001 newTotalSupply 5000.001 buyPrice 1000000 block 34
-MemberSoldToken Event 0: seller 0x0036f6addb6d64684390f55a92f0f4988266901b ethers 12.54 newEtherBalance 0 tokens 1254 newTotalSupply 0 sellPrice 0.01 block 9
-tx31 gas=400000 gasUsed=49482 cost=0.00098964 block=34 txId=0x2d28f016991cf8823443ddd2417592249eace08ddd3f37af23cca014bcce22c1
+tx31 gas=400000 gasUsed=53000 cost=0.00106 block=125 txId=0xcccaa4094fd2d7e2fe74ab4b883500cc5fb0c50edffbd75044a6f3aef27f5de0
 PASS Test 3.1 Member4 buys tokens in the last period when 1 BARF = 1,000,000 ETH
   CHECK 1. Member4 ether balance -1,000 ETH
   CHECK 2. Member4 token balance +0.001 BARF
@@ -242,59 +128,25 @@ PASS Test 3.1 Member4 buys tokens in the last period when 1 BARF = 1,000,000 ETH
 
 Test 3.2 Owner withdraw 10 ETH
 # Account                                                   EtherBalance                TokenBalance Name
-1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100180.028735149110321110        0.000000000000000000 Account #0 - Miner
-2 0x0014060ff383c9b21c6840a3b14aab06741e5c49   100009.978663041060400000        0.000000000000000000 Account #1 - BARF Owner
-3 0x0020017ba4c67f76c76b1af8c41821ee54f37171    99987.457877932400797580        0.000000000000000000 Account #2 - Member #1
-4 0x0036f6addb6d64684390f55a92f0f4988266901b   100012.537907937428481310     1000.000000000000000000 Account #3 - Member #2
-5 0x004e64833635cd1056b948b57286b7c91e62731c    99899.997805580000000000     4000.000000000000000000 Account #4 - Member #3
-6 0x0055fbc1ada89056088c75eaf50400af6756ae61    98999.999010360000000000        0.001000000000000000 Account #5 - Member #4
+1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100625.002120000000000000        0.000000000000000000 Account #0 - Miner
+2 0x0014060ff383c9b21c6840a3b14aab06741e5c49   100000.000000000000000000        0.000000000000000000 Account #1 - BARF Owner
+3 0x0020017ba4c67f76c76b1af8c41821ee54f37171   100000.000000000000000000        0.000000000000000000 Account #2 - Member #1
+4 0x0036f6addb6d64684390f55a92f0f4988266901b   100000.000000000000000000        0.000000000000000000 Account #3 - Member #2
+5 0x004e64833635cd1056b948b57286b7c91e62731c    99899.998940000000000000        0.000000000000000000 Account #4 - Member #3
+6 0x0055fbc1ada89056088c75eaf50400af6756ae61    98999.998940000000000000        0.000000000000000000 Account #5 - Member #4
 7 0x006b2baf3000413d83d257086fd3434a109aa552   100000.000000000000000000        0.000000000000000000 Account #6 - Member #5
-8 0xebb2634dd3194ba6d75eeb049cd0f73bf9801d95     1090.000000000000000000        0.000000000000000000 BARF
-contract.buyPrice=1000000 ETH per BARF
-contract.sellPrice=0.01 ETH per BARF
-contract.totalSupply=5000.001
-contract.currentEtherBalance=1090
-contract.currentTokenBalance=5000.001
-contract.amountOfEthersOwnerCanWithdraw=1039.99999
-Transfer Event 0: from 0x0020017ba4c67f76c76b1af8c41821ee54f37171 to 0x0036f6addb6d64684390f55a92f0f4988266901b 1254 block 7
-Transfer Event 1: from 0x004e64833635cd1056b948b57286b7c91e62731c to 0x0036f6addb6d64684390f55a92f0f4988266901b 1000 block 15
-Approval Event 0: owner 0x004e64833635cd1056b948b57286b7c91e62731c spender 0x0036f6addb6d64684390f55a92f0f4988266901b 2000 block 13
-Withdrawn Event 0: amount 10 remainingWithdrawal 1039.99999 block 36
-MemberBoughtToken Event 0: buyer 0x0020017ba4c67f76c76b1af8c41821ee54f37171 ethers 12.54 newEtherBalance 12.54 tokens 1254 newTotalSupply 1254 buyPrice 0.01 block 5
-MemberBoughtToken Event 1: buyer 0x004e64833635cd1056b948b57286b7c91e62731c ethers 100 newEtherBalance 100 tokens 5000 newTotalSupply 5000 buyPrice 0.02 block 11
-MemberBoughtToken Event 2: buyer 0x0055fbc1ada89056088c75eaf50400af6756ae61 ethers 1000 newEtherBalance 1100 tokens 0.001 newTotalSupply 5000.001 buyPrice 1000000 block 34
-MemberSoldToken Event 0: seller 0x0036f6addb6d64684390f55a92f0f4988266901b ethers 12.54 newEtherBalance 0 tokens 1254 newTotalSupply 0 sellPrice 0.01 block 9
-tx32 gas=4500000 gasUsed=30758 cost=0.00061516 block=36 txId=0xb889d16a0b88a413ff48d3d91fd76fbda6578a536dce0336cf3f1b38f179a244
-PASS Test 3.2 Owner withdraw 10 ETH
   CHECK 1. Owner ether balance +10 ETH
   CHECK 2. BARF contract ether balance -10 ETH
   CHECK 3. contract.amountOfEthersOwnerCanWithdraw 1039.99999 ETH
 
 Test 4.1 Member2 transfers 2,000 BARF tokens to Member1 when only 1,000 BARF owned - unsuccessful
 # Account                                                   EtherBalance                TokenBalance Name
-1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100190.029214609110321110        0.000000000000000000 Account #0 - Miner
-2 0x0014060ff383c9b21c6840a3b14aab06741e5c49   100009.978663041060400000        0.000000000000000000 Account #1 - BARF Owner
-3 0x0020017ba4c67f76c76b1af8c41821ee54f37171    99987.457877932400797580        0.000000000000000000 Account #2 - Member #1
-4 0x0036f6addb6d64684390f55a92f0f4988266901b   100012.537428477428481310     1000.000000000000000000 Account #3 - Member #2
-5 0x004e64833635cd1056b948b57286b7c91e62731c    99899.997805580000000000     4000.000000000000000000 Account #4 - Member #3
-6 0x0055fbc1ada89056088c75eaf50400af6756ae61    98999.999010360000000000        0.001000000000000000 Account #5 - Member #4
+1 0x000d1009bd8f0b1301cc5edc28ed1222a3ce671e   100625.002120000000000000        0.000000000000000000 Account #0 - Miner
+2 0x0014060ff383c9b21c6840a3b14aab06741e5c49   100000.000000000000000000        0.000000000000000000 Account #1 - BARF Owner
+3 0x0020017ba4c67f76c76b1af8c41821ee54f37171   100000.000000000000000000        0.000000000000000000 Account #2 - Member #1
+4 0x0036f6addb6d64684390f55a92f0f4988266901b   100000.000000000000000000        0.000000000000000000 Account #3 - Member #2
+5 0x004e64833635cd1056b948b57286b7c91e62731c    99899.998940000000000000        0.000000000000000000 Account #4 - Member #3
+6 0x0055fbc1ada89056088c75eaf50400af6756ae61    98999.998940000000000000        0.000000000000000000 Account #5 - Member #4
 7 0x006b2baf3000413d83d257086fd3434a109aa552   100000.000000000000000000        0.000000000000000000 Account #6 - Member #5
-8 0xebb2634dd3194ba6d75eeb049cd0f73bf9801d95     1090.000000000000000000        0.000000000000000000 BARF
-contract.buyPrice=1000000 ETH per BARF
-contract.sellPrice=0.01 ETH per BARF
-contract.totalSupply=5000.001
-contract.currentEtherBalance=1090
-contract.currentTokenBalance=5000.001
-contract.amountOfEthersOwnerCanWithdraw=1039.99999
-Transfer Event 0: from 0x0020017ba4c67f76c76b1af8c41821ee54f37171 to 0x0036f6addb6d64684390f55a92f0f4988266901b 1254 block 7
-Transfer Event 1: from 0x004e64833635cd1056b948b57286b7c91e62731c to 0x0036f6addb6d64684390f55a92f0f4988266901b 1000 block 15
-Approval Event 0: owner 0x004e64833635cd1056b948b57286b7c91e62731c spender 0x0036f6addb6d64684390f55a92f0f4988266901b 2000 block 13
-Withdrawn Event 0: amount 10 remainingWithdrawal 1039.99999 block 36
-MemberBoughtToken Event 0: buyer 0x0020017ba4c67f76c76b1af8c41821ee54f37171 ethers 12.54 newEtherBalance 12.54 tokens 1254 newTotalSupply 1254 buyPrice 0.01 block 5
-MemberBoughtToken Event 1: buyer 0x004e64833635cd1056b948b57286b7c91e62731c ethers 100 newEtherBalance 100 tokens 5000 newTotalSupply 5000 buyPrice 0.02 block 11
-MemberBoughtToken Event 2: buyer 0x0055fbc1ada89056088c75eaf50400af6756ae61 ethers 1000 newEtherBalance 1100 tokens 0.001 newTotalSupply 5000.001 buyPrice 1000000 block 34
-MemberSoldToken Event 0: seller 0x0036f6addb6d64684390f55a92f0f4988266901b ethers 12.54 newEtherBalance 0 tokens 1254 newTotalSupply 0 sellPrice 0.01 block 9
-tx41 gas=4500000 gasUsed=23973 cost=0.00047946 block=38 txId=0xd9eb29c8b0dd81378393fcd4524467be49cad1df7a8f075d38db8fb9dc0314c0
-PASS Test 4.1 Member2 transfers 2,000 BARF tokens to Member1 when only 1,000 BARF owned - unsuccessful
   CHECK 1. IMPORTANT - No changes
 

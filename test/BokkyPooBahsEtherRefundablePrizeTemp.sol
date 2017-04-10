@@ -1,6 +1,6 @@
 pragma solidity ^0.4.8;
 
-// ----------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
 // BokkyPooBah's Ether Refundable Prize
 //
 // A gift token backed by ethers
@@ -9,7 +9,7 @@ pragma solidity ^0.4.8;
 // - https://medium.com/@Vlad_Zamfir/a-safe-token-sale-mechanism-8d73c430ddd1
 //
 // Enjoy. (c) Bok Consulting Pty Ltd 2017. The MIT Licence.
-// ----------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
 
 contract Owned {
@@ -111,6 +111,23 @@ contract ERC20Token is Owned {
 contract BokkyPooBahsEtherRefundablePrize is ERC20Token {
 
     // ------ Token information ------
+    // Tokens can be bought from this contract at the 
+    // Buy Price. Tokens can be sold to this contract at
+    // the Sell Price 
+    // 
+    // ------------------------------------------------------------------------
+    // 
+    // Period                                ETH per BERP
+    // ------------------------- ------------------------
+    // From         To               Buy Price Sell Price
+    // ------------ ------------ ------------- ----------
+    // start        +7 days             0.0010     0.0010
+    // +7 days      +30 days            0.0011     0.0010
+    // +30 days     +60 days            0.0012     0.0010
+    // +60 days     +90 days            0.0013     0.0010
+    // +90 days     +365 days           0.0015     0.0010
+    // +365 days    forever          1000.0000     0.0010
+    // ------------------------------------------------------------------------
     string public constant symbol = "BERP";
     string public constant name = "BokkyPooBah Ether Refundable Prize";
     uint8 public constant decimals = 18;
@@ -128,32 +145,24 @@ contract BokkyPooBahsEtherRefundablePrize is ERC20Token {
     //
     // Check out the BARF prices on https://cryptoderivatives.market/ to see
     // if you can buy these tokens for less than this maximum price
-    function buyPrice() constant returns (uint256) {
-        // Members buy tokens initially at 1 BARF = 0.01 ETH
-        if (now < 1491781517) {
-            return 1 * 10**16;
-        // Price increase to 1 BARF = 0.02 ETH after 2 days and before 1 week
-        } else if (now < 1491781577) {
-            return 2 * 10**16;
-        // Price increase to 1 BARF = 0.04 ETH after 1 week and before 30 days
-        } else if (now < 1491781577) {
-            return 4 * 10**16;
-        // Price increase to 1 BARF = 0.06 ETH after 30 days and before 60 days
-        } else if (now < 1491781577) {
-            return 6 * 10**16;
-        // Price increase to 1 BARF = 0.08 ETH after 60 days and before 90 days
-        } else if (now < 1491781577) {
-            return 8 * 10**16;
-        // Price increase to 1 BARF = 10 ETH after 90 days and before 365 days (1 year)
-        } else if (now < 1491781577) {
-            return 1 * 10**19;
-        // Price increase to 1 BARF = 1,000 ETH after 365 days and before 3652 days (10 years)
-        } else if (now < 1491781637) {
-            return 1 * 10**22;
-        // Price increase to 1 BARF = 1,000,000 ETH after 3652 days (10 years). Effectively free floating ceiling
+    function buyPriceAt(uint256 at) constant returns (uint256) {
+        if (at < 1491783533) {
+            return 10 * 10**14;
+        } else if (at < 1491783533) {
+            return 11 * 10**14;
+        } else if (at < 1491783533) {
+            return 12 * 10**15;
+        } else if (at < 1491783533) {
+            return 13 * 10**15;
+        } else if (at < 1491783533) {
+            return 15 * 10**16;
         } else {
-            return 1 * 10**24;
+            return 10**21;
         }
+    }
+
+    function buyPrice() constant returns (uint256) {
+        return buyPriceAt(now);
     }
 
     // Members can always sell to the contract at 1 BARF = 0.01 ETH
@@ -164,7 +173,7 @@ contract BokkyPooBahsEtherRefundablePrize is ERC20Token {
     // Check out the BARF prices on https://cryptoderivatives.market/ to see
     // if you can sell these tokens for more than this minimum price
     function sellPrice() constant returns (uint256) {
-        return 10**16;
+        return 10**15;
     }
 
     // ------ Owner Withdrawal ------
@@ -189,33 +198,33 @@ contract BokkyPooBahsEtherRefundablePrize is ERC20Token {
     event Withdrawn(uint256 amount, uint256 remainingWithdrawal);
 
 
-    // ------ Member Buy and Sell tokens below ------
+    // ------ Buy and Sell tokens from/to the contract ------
     function () payable {
-        memberBuyToken();
+        buyTokens();
     }
 
-    function memberBuyToken() payable {
+    function buyTokens() payable {
         if (msg.value > 0) {
             uint tokens = msg.value * 1 ether / buyPrice();
             _totalSupply += tokens;
             balances[msg.sender] += tokens;
-            MemberBoughtToken(msg.sender, msg.value, this.balance, tokens, _totalSupply,
+            TokensBought(msg.sender, msg.value, this.balance, tokens, _totalSupply,
                 buyPrice());
         }
     }
-    event MemberBoughtToken(address indexed buyer, uint256 ethers, uint256 newEtherBalance,
+    event TokensBought(address indexed buyer, uint256 ethers, uint256 newEtherBalance,
         uint256 tokens, uint256 newTotalSupply, uint256 buyPrice);
 
-    function memberSellToken(uint256 amountOfTokens) {
+    function sellTokens(uint256 amountOfTokens) {
         if (amountOfTokens > balances[msg.sender]) throw;
         balances[msg.sender] -= amountOfTokens;
         _totalSupply -= amountOfTokens;
         uint256 ethersToSend = amountOfTokens * sellPrice() / 1 ether;
         if (!msg.sender.send(ethersToSend)) throw;
-        MemberSoldToken(msg.sender, ethersToSend, this.balance, amountOfTokens,
+        TokensSold(msg.sender, ethersToSend, this.balance, amountOfTokens,
             _totalSupply, sellPrice());
     }
-    event MemberSoldToken(address indexed seller, uint256 ethers, uint256 newEtherBalance,
+    event TokensSold(address indexed seller, uint256 ethers, uint256 newEtherBalance,
         uint256 tokens, uint256 newTotalSupply, uint256 sellPrice);
 
 
