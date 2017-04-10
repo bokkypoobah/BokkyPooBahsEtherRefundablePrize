@@ -2,7 +2,7 @@
 
 A gift token backed by ethers.
 
-Deployed to [0x385f9016fcb55cc7f31293025726ca221e6dfb85](https://etherscan.io/address/0x385f9016fcb55cc7f31293025726ca221e6dfb85) .
+Deployed to [0xed7da010027967365e0a7c370c1dde2f9fe4477f](https://etherscan.io/address/0xed7da010027967365e0a7c370c1dde2f9fe4477f) .
 
 Tokens can be bought from this contract at the Buy Price. Tokens can be
 sold back to this contract at the Sell Price 
