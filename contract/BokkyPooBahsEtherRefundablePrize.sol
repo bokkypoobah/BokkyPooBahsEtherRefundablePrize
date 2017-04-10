@@ -199,6 +199,13 @@ contract BokkyPooBahsEtherRefundablePrize is ERC20Token {
     }
     event Withdrawn(uint256 amount, uint256 remainingWithdrawal);
 
+    // ------------------------------------------------------------------------
+    // Receive deposits
+    // ------------------------------------------------------------------------
+    function deposit() payable {
+        Deposited(msg.value, this.balance);
+    }
+    event Deposited(uint256 amount, uint256 balance);
 
     // ------------------------------------------------------------------------
     // Buy and Sell tokens from/to the contract

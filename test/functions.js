@@ -180,6 +180,14 @@ function printContractDynamicDetails() {
   });
   withdrawnEvent.stopWatching();
 
+  var depositedEvent = contract.Deposited({}, { fromBlock: 0, toBlock: "latest" });
+  i = 0;
+  depositedEvent.watch(function (error, result) {
+    console.log("RESULT: Deposited Event " + i++ + ": amount " + web3.fromWei(result.args.amount, "ether") +
+      " balance " + web3.fromWei(result.args.balance, "ether") + " block " + result.blockNumber);
+  });
+  depositedEvent.stopWatching();
+
   var tokensBoughtEvent = contract.TokensBought({}, { fromBlock: 0, toBlock: "latest" });
   i = 0;
   tokensBoughtEvent.watch(function (error, result) {

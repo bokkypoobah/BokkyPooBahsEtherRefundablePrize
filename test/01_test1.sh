@@ -230,16 +230,15 @@ failIfGasEqualsGasUsed(tx24, testMessage);
 console.log("RESULT:   CHECK 1. IMPORTANT - No changes");
 console.log("RESULT: ");
 
-exit;
 
 // -----------------------------------------------------------------------------
-testMessage = "Test 3.1 Member4 buys tokens in the last period when 1 BERP = 1,000,000 ETH";
+testMessage = "Test 3.1 Member4 buys tokens in the last period when 1 BERP = 1,000 ETH";
 console.log("RESULT: " + testMessage);
-var date3M = new Date($CURRENTTIMEP3M * 1000);
-console.log("RESULT: Waiting until after $CURRENTTIMEP3M " + date3M + " currentDate=" + new Date());
-while ((new Date()).getTime() <= date3M.getTime()) {
+waitUntil = new Date(berp.deployedAt().plus(60*5) * 1000);
+console.log("RESULT: Waiting until after " + waitUntil.getTime() + " " + waitUntil + " currentDate=" + new Date());
+while ((new Date()).getTime() <= waitUntil.getTime()) {
 }
-console.log("RESULT: Waited until after $CURRENTTIMEP3M " + date3M + " currentDate=" + new Date());
+console.log("RESULT: Waited until after " + waitUntil.getTime() + " " + waitUntil + " currentDate=" + new Date());
 var tx31 = eth.sendTransaction({from: member4, to: berpAddress, gas: 400000, value: web3.toWei(1000, "ether")});
 while (txpool.status.pending > 0) {
 }
@@ -248,9 +247,9 @@ printContractDynamicDetails();
 printTxData("tx31", tx31);
 failIfGasEqualsGasUsed(tx31, testMessage);
 console.log("RESULT:   CHECK 1. Member4 ether balance -1,000 ETH");
-console.log("RESULT:   CHECK 2. Member4 token balance +0.001 BERP");
+console.log("RESULT:   CHECK 2. Member4 token balance +1.000 BERP");
 console.log("RESULT:   CHECK 3. BERP contract ether balance +1,000 ETH");
-console.log("RESULT:   CHECK 2. contract.amountOfEthersOwnerCanWithdraw 1049.99999 ETH");
+console.log("RESULT:   CHECK 2. contract.amountOfEthersOwnerCanWithdraw 1009.0899 ETH");
 console.log("RESULT: ");
 
 
@@ -267,7 +266,8 @@ printTxData("tx32", tx32);
 failIfGasEqualsGasUsed(tx32, testMessage);
 console.log("RESULT:   CHECK 1. Owner ether balance +10 ETH");
 console.log("RESULT:   CHECK 2. BERP contract ether balance -10 ETH");
-console.log("RESULT:   CHECK 3. contract.amountOfEthersOwnerCanWithdraw 1039.99999 ETH");
+console.log("RESULT:   CHECK 3. contract.amountOfEthersOwnerCanWithdraw 999.0899 ETH");
+console.log("RESULT:   CHECK 4. Withdrawal event");
 console.log("RESULT: ");
 
 
@@ -283,6 +283,24 @@ printContractDynamicDetails();
 printTxData("tx41", tx41);
 failIfGasEqualsGasUsed(tx41, testMessage);
 console.log("RESULT:   CHECK 1. IMPORTANT - No changes");
+console.log("RESULT: ");
+
+
+// -----------------------------------------------------------------------------
+testMessage = "Test 4.2 Member5 deposits 1,000 ETH";
+console.log("RESULT: " + testMessage);
+var depositAmount = web3.toWei(1000, "ether");
+var tx42 = berp.deposit(member1, {from: member5, gas: 4500000, value: depositAmount});
+while (txpool.status.pending > 0) {
+}
+printBalances();
+printContractDynamicDetails();
+printTxData("tx42", tx42);
+failIfGasEqualsGasUsed(tx42, testMessage);
+console.log("RESULT:   CHECK 1. Member5 balance -1,000 ETH");
+console.log("RESULT:   CHECK 2. BERP contract ether balance +1,000 ETH");
+console.log("RESULT:   CHECK 3. contract.amountOfEthersOwnerCanWithdraw 1,999.0899 ETH");
+console.log("RESULT:   CHECK 4. Deposited event");
 console.log("RESULT: ");
 
 EOF
