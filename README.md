@@ -59,7 +59,8 @@ The test cases can be found in [test/01_test1.sh](https://github.com/bokkypoobah
 
 ETH or BERP contributions to the reward pool have been:
 
-* 1 ETH from [0x3776088484e009b882b3c565cb51824a7d51aa85](https://etherscan.io/address/0x3776088484e009b882b3c565cb51824a7d51aa85). Transaction [0xb4d2f9e0...](https://etherscan.io/tx/0xb4d2f9e02af79a1d182e723361c9e8b5bc979e64c6bd7e2bf914c0ee8d499e77)
+* My contribution of 12,540 BERPs in tx [0xbf5d0043...](https://etherscan.io/tx/0xbf5d0043e619f9e2b7d6ef247e4e173a6994231d3c3d672ece9c170187b8217d)
+* 1 ETH from [0x3776088484e009b882b3c565cb51824a7d51aa85](https://etherscan.io/address/0x3776088484e009b882b3c565cb51824a7d51aa85), tx [0xb4d2f9e0...](https://etherscan.io/tx/0xb4d2f9e02af79a1d182e723361c9e8b5bc979e64c6bd7e2bf914c0ee8d499e77)
 
 The ETH contributions will be converted into BERP before the distribution.
 
@@ -72,7 +73,7 @@ Thanks.
 
 BERP rewards will be distributed to the list below in equal proportions when the WhitehatWithdraw contract expires (expected April 15 2017):
 
-* Reward Account [0xe0A2AC4c7b46Ce32C5b4Bf153Ca50E603D36Abc8](https://etherscan.io/address/0xe0A2AC4c7b46Ce32C5b4Bf153Ca50E603D36Abc8). Transaction [0xce4babae](http://gastracker.io/tx/0xce4babae31c62346ffa61f65a2ceab93955844459e4ead58e3cd909647c1b20a). [Source](https://www.reddit.com/r/ethereum/comments/64ia5z/incentivising_the_dao_refundathon_with_the_berp/dg2p3u2/).
+* Reward Account [0xe0A2AC4c7b46Ce32C5b4Bf153Ca50E603D36Abc8](https://etherscan.io/address/0xe0A2AC4c7b46Ce32C5b4Bf153Ca50E603D36Abc8). Withdrawal tx [0xce4babae](http://gastracker.io/tx/0xce4babae31c62346ffa61f65a2ceab93955844459e4ead58e3cd909647c1b20a). [Source](https://www.reddit.com/r/ethereum/comments/64ia5z/incentivising_the_dao_refundathon_with_the_berp/dg2p3u2/).
 
 <br />
 
