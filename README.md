@@ -55,6 +55,12 @@ The test cases can be found in [test/01_test1.sh](https://github.com/bokkypoobah
 
 <br />
 
+## Incentivising The DAO Refundathon With The BERP Tokens Prize Pool. Come Claim Your Prize! Ends In Less Than 5 Days
+
+Details of this offer can be found at [Incentivising The DAO Refundathon With The BERP Tokens Prize Pool. Come Claim Your Prize! Ends In Less Than 5 Days](https://www.reddit.com/r/ethereum/comments/64ia5z/incentivising_the_dao_refundathon_with_the_berp/).
+
+<br />
+
 ### BERP Reward Contributions 
 
 ETH or BERP contributions to the reward pool have been:
