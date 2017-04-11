@@ -105,6 +105,7 @@ Thanks.
 BERP rewards will be distributed to the list below in equal proportions when the WhitehatWithdraw contract expires (expected April 15 2017):
 
 * Reward Account [0xe0A2AC4c7b46Ce32C5b4Bf153Ca50E603D36Abc8](https://etherscan.io/address/0xe0A2AC4c7b46Ce32C5b4Bf153Ca50E603D36Abc8). Withdrawal tx [0xce4babae](http://gastracker.io/tx/0xce4babae31c62346ffa61f65a2ceab93955844459e4ead58e3cd909647c1b20a). [Source](https://www.reddit.com/r/ethereum/comments/64ia5z/incentivising_the_dao_refundathon_with_the_berp/dg2p3u2/).
+* Reward account [0x308032027f59Eb13e8A26E923958a687e81875b1](https://etherscan.io/address/0x308032027f59Eb13e8A26E923958a687e81875b1). Withdrawal tx [0x9ec8f7166...](http://gastracker.io/tx/0x9ec8f7166fed29e03108f0e001e9cd5628237a2c9fcef7d46aee5c6770b9a24a). [Source](https://www.reddit.com/r/ethereum/comments/64ia5z/incentivising_the_dao_refundathon_with_the_berp/dg4lc74/)
 
 <br />
 
