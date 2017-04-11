@@ -55,7 +55,13 @@ The test cases can be found in [test/01_test1.sh](https://github.com/bokkypoobah
 
 ### BERP Reward Contributions 
 
-(contributions to the BERP Reward Pool will be listed here)
+ETH or BERP contributions to the reward pool have been:
+
+* 1 ETH from [0x3776088484e009b882b3c565cb51824a7d51aa85](https://etherscan.io/address/0x3776088484e009b882b3c565cb51824a7d51aa85). Transaction [0xb4d2f9e0...]https://etherscan.io/tx/0xb4d2f9e02af79a1d182e723361c9e8b5bc979e64c6bd7e2bf914c0ee8d499e77)
+
+The ETH contributions will be converted into BERP before the distribution.
+
+Thanks.
 
 
 <br />
