@@ -1,6 +1,6 @@
 # BokkyPooBah's Ether Refundable Prize
 
-A gift token backed by ethers.
+A digital gift token backed by ethers.
 
 My initial use is to incentivise The DAO token holders to withdraw their refunds, but anyone is free to use these unlimited (but increasingly costlier to purchase) tokens as a digital ETH gift card. 
 
@@ -8,7 +8,7 @@ The [BokkyPooBahsEtherRefundablePrize.sol](https://github.com/bokkypoobah/BokkyP
 
 These tokens can be bought from this contract at the Buy Price.
 
-These tokens can be sold back to this contract at the Sell Price. Ethers backing the outstanding tokens are locked in the token contract.
+These tokens can always be sold back to this contract at the Sell Price. Ethers backing the token balance are locked in the token contract.
 
     Period                                ETH per BERP
     ------------------------- ------------------------
