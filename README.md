@@ -9,7 +9,7 @@ My initial use is to incentivise The DAO token holders to withdraw their refunds
 **Table of contents**
 
 * [The BERP Token Contract](#the-berp-token-contract)
-  * [The BERP Token Contract Buy Price And Sell Price]()
+  * [The BERP Token Contract Buy Price And Sell Price](#the-berp-token-contract-buy-price-and-sell-price)
   * [How To Buy BERP Tokens](#how-to-buy-berp-tokens)
   * [How To Sell BERP Tokens Back To The BERP Contract](#how-to-sell-berp-tokens-back-to-the-berp-contract)
   * [Testing And Results](#testing-and-results)
