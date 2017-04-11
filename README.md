@@ -4,6 +4,20 @@ A digital gift token backed by ethers.
 
 My initial use is to incentivise The DAO token holders to withdraw their refunds, but anyone is free to use these unlimited (but increasingly costlier to purchase) tokens as a digital ETH gift card. 
 
+**Table of contents**
+
+* [The BERP Token Contract]()
+  * [How To Buy BERP Tokens](#how-to-buy-berp-tokens)
+  * [How To Sell BERP Tokens Back To The BERP Contract](#how-to-sell-berp-tokens-back-to-the-berp-contract)
+  * [Testing And Results](#testing-and-results)
+* [Incentivising The DAO Refundathon With The BERP Tokens Prize Pool. Come Claim Your Prize! Ends In Less Than 5 Days](#incentivising-the-dao-refundathon-with-the-berp-tokens-prize-pool-come-claim-your-prize-ends-in-less-than-5-days)
+  * [BERP Reward Contributions](#berp-reward-contributions)
+  * [BERP Reward Distribution](#berp-reward-distribution)
+
+<br />
+
+## The BERP Token Contract
+
 The [BokkyPooBahsEtherRefundablePrize.sol](https://github.com/bokkypoobah/BokkyPooBahsEtherRefundablePrize/blob/d54b38150ca8c5623bc9786f298421552cf2b861/contract/BokkyPooBahsEtherRefundablePrize.sol) contract has been deployed to [0xed7da010027967365e0a7c370c1dde2f9fe4477f](https://etherscan.io/address/0xed7da010027967365e0a7c370c1dde2f9fe4477f) at 02:54:00 Mon April 10 2017  UTC (Unix timestamp 1491792840).
 
 These tokens can be bought from this contract at the Buy Price.
