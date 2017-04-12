@@ -27,6 +27,8 @@ An implementation of [Vlad Zamfir's Safe Token Sale Mechanism Contract](https://
 
 The [BokkyPooBahsEtherRefundablePrize.sol](https://github.com/bokkypoobah/BokkyPooBahsEtherRefundablePrize/blob/d54b38150ca8c5623bc9786f298421552cf2b861/contract/BokkyPooBahsEtherRefundablePrize.sol) contract has been deployed to [0xed7da010027967365e0a7c370c1dde2f9fe4477f](https://etherscan.io/address/0xed7da010027967365e0a7c370c1dde2f9fe4477f) at 02:54:00 Mon April 10 2017 UTC (Unix timestamp 1491792840).
 
+Token Explorer: [0xed7da010027967365e0a7c370c1dde2f9fe4477f](https://etherscan.io/token/0xed7da010027967365e0a7c370c1dde2f9fe4477f)
+
 <br />
 
 ### The BERP Token Contract Buy Price And Sell Price
