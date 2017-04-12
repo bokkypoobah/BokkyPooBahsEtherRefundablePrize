@@ -92,7 +92,7 @@ Details of this offer can be found at [Incentivising The DAO Refundathon With Th
 
 ### BERP Reward Contributions 
 
-ETH or BERP contributions to the reward pool have been:
+ETH or BERP contributions to the reward pool [0x000003e1e88a1110e961f135df8cdea4b1ffa81a](https://etherscan.io/address/0x000003e1e88a1110e961f135df8cdea4b1ffa81a) follows:
 
 \#  | Contribution Tx | +BERP / ETH | BERP / ETH Balance | Notes
 --- | -------------- | ------------- | ------ | ----
