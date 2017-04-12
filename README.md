@@ -109,7 +109,7 @@ BERP rewards will be distributed to the list below in equal proportions when the
 * Reward account [0xfD918536A8efa6F6cEFE1fa1153995Fef5E33d3B](https://etherscan.io/address/0xfD918536A8efa6F6cEFE1fa1153995Fef5E33d3B). Withdrawal tx [0x25b40be2...](https://etherscan.io/tx/0x25b40be28a189859be555e5f0cd23248fd18fe884f426b6fbd1a4b0ab26651ab). Source - private Reddit message.
 * Reward account {to be provided}. Withdrawal tx [161f6519...](https://etherscan.io/tx/0x161f65191ebc3ef71380ccf8904c88b27f934a7dc6191a2e6a8cba2f41438c21). Source - private Reddit message.
 
-#  | Reward Account | Withdrawal Tx | Source
+\#  | Reward Account | Withdrawal Tx | Source
 -- | -------------- | ------------- | ------
 
 1 | [0xe0A2AC4c7b46Ce32C5b4Bf153Ca50E603D36Abc8](https://etherscan.io/address/0xe0A2AC4c7b46Ce32C5b4Bf153Ca50E603D36Abc8) | [0xce4babae...](http://gastracker.io/tx/0xce4babae31c62346ffa61f65a2ceab93955844459e4ead58e3cd909647c1b20a) | [Source](https://www.reddit.com/r/ethereum/comments/64ia5z/incentivising_the_dao_refundathon_with_the_berp/dg2p3u2/)
