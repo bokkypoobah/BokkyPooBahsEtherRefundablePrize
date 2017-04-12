@@ -94,10 +94,10 @@ Details of this offer can be found at [Incentivising The DAO Refundathon With Th
 
 ETH or BERP contributions to the reward pool have been:
 
-\#  | Contribution Tx | BERP (or ETH) | Notes
---- | -------------- | ------------- | ------
-1 | [0xbf5d0043...](https://etherscan.io/tx/0xbf5d0043e619f9e2b7d6ef247e4e173a6994231d3c3d672ece9c170187b8217d) | 12,540 BERP | My contribution
-2 | [0xb4d2f9e0...](https://etherscan.io/tx/0xb4d2f9e02af79a1d182e723361c9e8b5bc979e64c6bd7e2bf914c0ee8d499e77) | 1 ETH | To be converted to BERP
+\#  | Contribution Tx | +BERP / ETH | BERP / ETH Balance | Notes
+--- | -------------- | ------------- | ------ | ----
+1 | [0xbf5d0043...](https://etherscan.io/tx/0xbf5d0043e619f9e2b7d6ef247e4e173a6994231d3c3d672ece9c170187b8217d) | 12,540 BERP | 13,540 BERP | My contribution
+2 | [0xb4d2f9e0...](https://etherscan.io/tx/0xb4d2f9e02af79a1d182e723361c9e8b5bc979e64c6bd7e2bf914c0ee8d499e77) | 1 ETH | 13,540 BERP | 1 ETH converted to 1,000 BERP
 
 * My contribution of 12,540 BERPs in tx [0xbf5d0043...](https://etherscan.io/tx/0xbf5d0043e619f9e2b7d6ef247e4e173a6994231d3c3d672ece9c170187b8217d)
 * 1 ETH from [0x3776088484e009b882b3c565cb51824a7d51aa85](https://etherscan.io/address/0x3776088484e009b882b3c565cb51824a7d51aa85), tx [0xb4d2f9e0...](https://etherscan.io/tx/0xb4d2f9e02af79a1d182e723361c9e8b5bc979e64c6bd7e2bf914c0ee8d499e77)
