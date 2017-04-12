@@ -108,7 +108,7 @@ Thanks.
 
 ### BERP Reward Distribution 
 
-BERP rewards will be distributed to the list below in equal proportions when the WhitehatWithdraw contract expires (expected April 15 2017):
+13,540 BERPs will be distributed to the reward accounts in the list below in equal proportions when the WhitehatWithdraw contract expires (expected April 15 2017):
 
 \#  | Reward Account | Withdrawal Tx | Source
 --- | -------------- | ------------- | ------
