@@ -4,7 +4,7 @@ A digital gift token backed by ethers.
 
 My initial use is to incentivise The DAO token holders to withdraw their refunds, but anyone is free to use these unlimited (but increasingly more expensive to purchase) tokens as a digital ETH gift card. 
 
-An implementation of [Vlad Zamfir's Safe Token Sale Mechanism Contract](https://medium.com/@Vlad_Zamfir/a-safe-token-sale-mechanism-8d73c430ddd1).
+This is my first implementation of [Vlad Zamfir's Safe Token Sale Mechanism Contract](https://medium.com/@Vlad_Zamfir/a-safe-token-sale-mechanism-8d73c430ddd1).
 
 <hr />
 
