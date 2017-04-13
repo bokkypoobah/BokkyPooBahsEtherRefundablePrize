@@ -89,7 +89,7 @@ The test cases can be found in [test/01_test1.sh](https://github.com/bokkypoobah
 Details of this offer can be found at [Incentivising The DAO Refundathon With The BERP Tokens Prize Pool. Come Claim Your Prize! Ends In Less Than 5 Days](https://www.reddit.com/r/ethereum/comments/64ia5z/incentivising_the_dao_refundathon_with_the_berp/).
 
 > **Summary**
-
+> 
 > * The DAO To ETC refund withdrawals end on April 15 2017 (unless extended) and there is 1,687,973.8684 ETC (USD 4,405,611.80) waiting to be [withdrawn](https://gastracker.io/addr/0x9f5304da62a5408416ea58a17a92611019bd5ce3)
 > * The DAO token holders (DTHs) who execute their DAO to ETC (most important), DAO to ETH, and DAO to ETH ExtraBalance withdrawals will go into a pool for BokkyPooBah's Ether Refundable Prize (BERP) token distribution
 > * Individuals who causes other DTHs to execute their refund withdrawals will also go into the same pool for BERP token distribution
@@ -97,9 +97,20 @@ Details of this offer can be found at [Incentivising The DAO Refundathon With Th
 > * Each BERP token will always have a minimum value of 0.001 ETH
 > * Anyone who strongly feels that the DAO to ETC withdrawal contract needs to be drawn down so the Whitehat Group (WHG) does not get to decide what to do with the funds can send a contribution to the pool
 > * Anyone who wants to help incentivise DTHs withdraw can also send a contribution to the pool
-> * Any contributions of ETH or BERP tokens sent to [E] [0x000003e1e88a1110e961f135df8cdea4b1ffa81a](https://etherscan.io/token/0xed7da010027967365e0a7c370c1dde2f9fe4477f?a=0x000003e1e88a1110e961f135df8cdea4b1ffa81a) will be added to the prize distribution pool
+> * Any contributions of ETH or BERP tokens sent to [0x000003e1e88a1110e961f135df8cdea4b1ffa81a](https://etherscan.io/token/0xed7da010027967365e0a7c370c1dde2f9fe4477f?a=0x000003e1e88a1110e961f135df8cdea4b1ffa81a) will be added to the prize distribution pool
 > * BERP tokens can be bought from the BERP token contract by sending ETH to [0xed7da010027967365e0a7c370c1dde2f9fe4477f](https://etherscan.io/address/0xed7da010027967365e0a7c370c1dde2f9fe4477f)
 > * BERP token details can be found on this page.
+> 
+> **What Can You Do?**
+> 
+> * If you are a DTH, execute your refund withdrawals immediately!
+> * **If you know any DTHs, contact them through whatever means and get them to execute their refund withdrawals immediately!**
+> 
+> **How Do I/The DTH Withdraw My/Their Refunds?**
+> 
+> * See https://theethereum.wiki/w/index.php/The_DAO_Refunds
+> * Contact me in this post or in a private message if you need assistance with your withdrawals
+
 
 <br />
 
