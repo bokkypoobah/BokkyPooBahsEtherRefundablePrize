@@ -86,7 +86,7 @@ The test cases can be found in [test/01_test1.sh](https://github.com/bokkypoobah
 
 ## Incentivising The DAO Refundathon With The BERP Tokens Prize Pool. Come Claim Your Prize! Ends In Less Than 5 Days
 
-Details of this offer can be found at [Incentivising The DAO Refundathon With The BERP Tokens Prize Pool. Come Claim Your Prize! Ends In Less Than 5 Days](https://www.reddit.com/r/ethereum/comments/64ia5z/incentivising_the_dao_refundathon_with_the_berp/).
+Details of this offer from [Incentivising The DAO Refundathon With The BERP Tokens Prize Pool. Come Claim Your Prize! Ends In Less Than 5 Days](https://www.reddit.com/r/ethereum/comments/64ia5z/incentivising_the_dao_refundathon_with_the_berp/) follows:
 
 > **Summary**
 > 
@@ -99,7 +99,7 @@ Details of this offer can be found at [Incentivising The DAO Refundathon With Th
 > * Anyone who wants to help incentivise DTHs withdraw can also send a contribution to the pool
 > * Any contributions of ETH or BERP tokens sent to [0x000003e1e88a1110e961f135df8cdea4b1ffa81a](https://etherscan.io/token/0xed7da010027967365e0a7c370c1dde2f9fe4477f?a=0x000003e1e88a1110e961f135df8cdea4b1ffa81a) will be added to the prize distribution pool
 > * BERP tokens can be bought from the BERP token contract by sending ETH to [0xed7da010027967365e0a7c370c1dde2f9fe4477f](https://etherscan.io/address/0xed7da010027967365e0a7c370c1dde2f9fe4477f)
-> * BERP token details can be found on this page.
+> * BERP token details can be found at [here](https://github.com/bokkypoobah/BokkyPooBahsEtherRefundablePrize)
 > 
 > **What Can You Do?**
 > 
@@ -110,7 +110,32 @@ Details of this offer can be found at [Incentivising The DAO Refundathon With Th
 > 
 > * See https://theethereum.wiki/w/index.php/The_DAO_Refunds
 > * Contact me in this post or in a private message if you need assistance with your withdrawals
-
+> 
+> **How Do I/The DTH Get Into The Prize Distribution Pool?**
+> 
+> * Post your transaction id and your BERP reward account to this post
+> * Or if you caused a DTH to execute their refund, post their transaction id and your BERP reward account to this post
+> * If you prefer, send me a private message . Note that the final distribution when the Withdrawal contract expires will be made public.
+> 
+> **Details**
+> 
+> * The DAO to ETC refund withdrawals end on April 15 2017. The Whitehat Group will have access to the balance of the funds after this date - see https://blog.bity.com/2016/09/06/whitehat-withdrawal-contract-final-deposit-is-available/
+> * A few people in the Ethereum community are not happy about this, so let us try to reduce the balance of the withdrawal contract
+> * 12.54 ETH has been personally donated to me recently when helping out DTHs withdraw their refunds
+> * This 12.54 ETH has been used to create 12,540 BERP tokens
+> * Each BERP tokens cost 0.001 ETH to purchase for the first 7 days from the creation of the BERP token contract (02:54:00 Mon April 10 2017 UTC)
+> * Each BERP tokens will cost 0.0011 ETH to purchase after 7 days and up to 30 days, and this rate will continue increasing
+> * See [this](https://github.com/bokkypoobah/BokkyPooBahsEtherRefundablePrize) for the price increases
+> * After 1 year, each BERP tokens will cost 1,000 ETH to purchase
+> * BERP tokens can always be sold back to the BERP token contract to receive 0.001 ETH for each BERP token
+> * BERP tokens are ERC20 compliant, are currently tradable at [E] https://cryptoderivatives.market/token/BERP
+> * Note that after 7 days, the excess cost over 1 BERP = 0.001 ETH will end up in the BERP token contract, and the owner (me) will have access to these funds. So only buy BERP tokens after 7 days if you are feeling very generous
+> * You can buy BERP tokens and give them out for any purpose. They will always be refundable for 0.001 ETH
+> * The final distribution (and contributions) of BERP tokens when the DAO to ETC withdrawal contract period expires will be published at https://github.com/bokkypoobah/BokkyPooBahsEtherRefundablePrize .
+> 
+> (This may be a bad idea, but I least I did try)
+> 
+> BokkyPooBah
 
 <br />
 
