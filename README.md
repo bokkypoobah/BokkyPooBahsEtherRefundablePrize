@@ -157,6 +157,8 @@ Thanks.
 
 ### BERP Reward Distribution 
 
+**UPDATE Apr 15 2017 - The [WhitehatWithdraw contract has been extended to Jan 10 2018](https://www.reddit.com/r/ethereum/comments/65ex5c/whg_withdraw_contract_extended/).** The date that I close the BERP Reward Distribution pool and distribute the rewards has not been decided yet. This page will be updated when this is done. 
+
 13,540 BERPs will be distributed to the reward accounts on the ETH chain in the list below in equal proportions when the WhitehatWithdraw contract expires (expected April 15 2017):
 
 \#  | ETH Chain Reward Account | Withdrawal Tx | Source
