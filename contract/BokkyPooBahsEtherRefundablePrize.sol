@@ -29,6 +29,7 @@ pragma solidity ^0.4.8;
 
 contract Owned {
     address public owner;
+    address public newOwner;
     event OwnershipTransferred(address indexed _from, address indexed _to);
 
     function Owned() {
@@ -40,9 +41,15 @@ contract Owned {
         _;
     }
 
-    function transferOwnership(address newOwner) onlyOwner {
-        OwnershipTransferred(owner, newOwner);
-        owner = newOwner;
+    function transferOwnership(address _newOwner) onlyOwner {
+        newOwner = _newOwner;
+    }
+ 
+    function acceptOwnership() {
+        if (msg.sender == newOwner) {
+            OwnershipTransferred(owner, newOwner);
+            owner = newOwner;
+        }
     }
 }
 
@@ -51,23 +58,33 @@ contract Owned {
 contract ERC20Token is Owned {
     uint256 _totalSupply = 0;
 
+    // ------------------------------------------------------------------------
     // Balances for each account
+    // ------------------------------------------------------------------------
     mapping(address => uint256) balances;
 
+    // ------------------------------------------------------------------------
     // Owner of account approves the transfer of an amount to another account
+    // ------------------------------------------------------------------------
     mapping(address => mapping (address => uint256)) allowed;
 
+    // ------------------------------------------------------------------------
     // Get the total token supply
+    // ------------------------------------------------------------------------
     function totalSupply() constant returns (uint256 totalSupply) {
         totalSupply = _totalSupply;
     }
 
+    // ------------------------------------------------------------------------
     // Get the account balance of another account with address _owner
+    // ------------------------------------------------------------------------
     function balanceOf(address _owner) constant returns (uint256 balance) {
         return balances[_owner];
     }
 
-    // Send _value amount of tokens to address _to
+    // ------------------------------------------------------------------------
+    // Transfer the balance from owner's account to another account
+    // ------------------------------------------------------------------------
     function transfer(address _to, uint256 _amount) returns (bool success) {
         if (balances[msg.sender] >= _amount
             && _amount > 0
@@ -81,9 +98,11 @@ contract ERC20Token is Owned {
         }
     }
 
+    // ------------------------------------------------------------------------
     // Allow _spender to withdraw from your account, multiple times, up to the
     // _value amount. If this function is called again it overwrites the
     // current allowance with _value.
+    // ------------------------------------------------------------------------
     function approve(
         address _spender,
         uint256 _amount
@@ -93,9 +112,11 @@ contract ERC20Token is Owned {
         return true;
     }
 
+    // ------------------------------------------------------------------------
     // Spender of tokens transfer an amount of tokens from the token owner's
     // balance to the spender's account. The owner of the tokens must already
     // have approve(...)-d this transfer
+    // ------------------------------------------------------------------------
     function transferFrom(
         address _from,
         address _to,
@@ -115,8 +136,10 @@ contract ERC20Token is Owned {
         }
     }
 
+    // ------------------------------------------------------------------------
     // Returns the amount of tokens approved by the owner that can be
     // transferred to the spender's account
+    // ------------------------------------------------------------------------
     function allowance(
         address _owner, 
         address _spender
@@ -253,7 +276,7 @@ contract BokkyPooBahsEtherRefundablePrize is ERC20Token {
 
 
     // ------------------------------------------------------------------------
-    // Information function
+    // Amount the owner can withdraw
     // ------------------------------------------------------------------------
     function amountOfEthersOwnerCanWithdraw() constant returns (uint256) {
         uint256 etherBalance = this.balance;
@@ -265,6 +288,10 @@ contract BokkyPooBahsEtherRefundablePrize is ERC20Token {
         }
     }
 
+
+    // ------------------------------------------------------------------------
+    // Information function
+    // ------------------------------------------------------------------------
     function currentEtherBalance() constant returns (uint256) {
         return this.balance;
     }
